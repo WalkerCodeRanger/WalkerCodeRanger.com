@@ -1,4 +1,5 @@
-name: Your New Jekyll Site
+name: Walker Code Ranger
 markdown: redcarpet
 pygments: true
 encoding: UTF-8
+permalink: /blog/:year/:month/:title
