@@ -1,13 +1,15 @@
 ---
-layout: default
-title: Your New Jekyll Site
+layout: master
+title: Walker Code Ranger
 ---
-
-<div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
+<div id="home-page">
+	{% include header.html %}
+	<section id="follow-me">
+		Follow Me On
+		<ul>
+			<li><a href="https://github.com/WalkerCodeRanger">GitHub</a></li>
+			<li><a href="https://twitter.com/WalkerCodeRangr">Twitter</a></lI>
+		</ul>
+	</section>
+	{% include footer.html %}
 </div>
