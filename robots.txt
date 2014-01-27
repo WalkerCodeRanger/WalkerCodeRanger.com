@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /blog/topics
+Disallow: /blog/archive
+
+Sitemap: /sitemap.xml
+
