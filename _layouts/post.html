@@ -9,7 +9,7 @@ layout: page
 	</div>
 	<div class="meta">
 		<span>PUBLISHED:</span><span class="published">{{ page.date | date: "%B %-d, %Y" }}</span>
-		{% if page.tags.length > 0 %}
+		{% if page.tags != empty %}
 			<span>TOPICS:</span><span class="topics">
 			{% for tag in page.tags %}
 				<a href="/blog/topic/{{ tag }}">{{ tag }}</a>
@@ -18,3 +18,11 @@ layout: page
 		</span>
 	</div>
 </section>
+<div class="pagNav">
+	{% if page.previous %}
+		<a href="{{ page.previous.url }}/" class="previous">&laquo; Previous</a>
+	{% endif %}
+	{% if page.next %}
+		<a href="{{ page.next.url }}/" class="next">Next &raquo;</a>
+	{% endif %}
+</div>
