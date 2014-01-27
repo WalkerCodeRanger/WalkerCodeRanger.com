@@ -17,9 +17,9 @@ title : Walker Code Ranger Blog Archive
 			<h2><a href="/blog/{{this_year}}/{{this_month_num}}/">{{this_month}} {{this_year}}</a></h2>
 			<ul>
 	{% endif %}
-	
+
 				<li><a href="{{post.url}}">{{post.title}}</a></li>
-	
+
 	{% if forloop.last %}
 			</ul>
 		</section>
@@ -31,5 +31,4 @@ title : Walker Code Ranger Blog Archive
 			<ul>
 	{% endif %}
 {% endfor %}
-</ul>
- </section>
+</section>
