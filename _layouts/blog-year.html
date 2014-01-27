@@ -2,8 +2,8 @@
 layout: page
 ---
 {% capture year %}{{page.year}}{% endcapture %}
-<section id="year{{page.year}}" class="blog-year">
-	<h1>{{page.year}}</h1>
+<section id="blog-{{year}}" class="blog-year">
+	<h1>{{year}}</h1>
 {% for post in site.posts  %}
 	{% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
 	{% if this_year == year %}

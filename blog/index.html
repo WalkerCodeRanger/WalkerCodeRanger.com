@@ -3,15 +3,7 @@ layout: page
 title: Walker Code Ranger Blog
 ---
 {% for post in paginator.posts %}
-<section class="post">
-	<div class="meta">
-		<span class="published">{{ post.date | date: "%B %-d, %Y" }}</span>
-	</div>
-	<h1><a href="{{ post.url }}/">{{ post.title }}</a></h1>
-	<div class="content>
-		{{ post.content }}
-	</div>
-</section>
+	{% include embedded-post.html %}
 {% endfor %}
 <div class="pagination">
 	{% if paginator.next_page %}
