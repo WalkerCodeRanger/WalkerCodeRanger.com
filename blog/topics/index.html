@@ -1,0 +1,19 @@
+---
+layout: page
+title: "Topics : Walker Code Ranger Blog"
+---
+{% capture tags %}
+  {% for tag in site.tags %}
+    {{ tag[0] | replace: ' ', '-' }}
+  {% endfor %}
+{% endcapture %}
+{% assign sortedtags = tags | split:' ' | sort %}
+<section id="topics">
+	<h1>TOPICS</h1>
+	<ul>
+		{% for tagSlug in sortedtags %}
+			{% assign tag = tagSlug | replace: '-', ' ' %}
+			<li><a href="/blog/topics/{{tagSlug | downcase}}/">{{tag}}</a> ({{site.tags[tag].size}})</li>
+		{% endfor %}
+	</ul>
+</section>
