@@ -9,6 +9,85 @@
 }
 
 /*****************************************************************************/
+/* Links
+/*****************************************************************************/
+a:link, :visited
+{
+  color: #9C8A6A;
+  text-decoration: none;
+}
+a:hover, a:active{
+  color: #3E372B;
+  text-decoration: underline;
+}
+
+
+/*****************************************************************************/
+/* Header
+/*****************************************************************************/
+header
+{
+	padding-top: 15px;
+	color: #9C8A6A;
+}
+
+header > ul
+{
+	margin: 10px auto;
+	border-top: 1px solid #EAEAEA;
+	border-bottom: 1px solid #EAEAEA;
+	text-transform: uppercase;
+	font-size: 1.5em;
+}
+
+header ul
+{
+	list-style: none;
+	padding: 0;
+	text-align: center;
+}
+
+header li
+{
+	display: inline;
+	margin: 0 10px;
+}
+
+header li ul
+{
+	display: inline;
+	margin-left: 10px;
+}
+
+header li ul li
+{
+	margin: 0 3px;
+}
+
+header li ul:before
+{
+	content: "(";
+}
+header li ul:after
+{
+	content: ")";
+}
+
+@media screen
+{
+	header > a
+	{
+		display: block;
+		position: relative;
+		margin: 0 auto;
+		width: 200px;
+		height: 200px;
+		text-indent: -9999px;
+		background-image: url(/images/WalkerCodeRangerBadge.png);
+	}
+}
+
+/*****************************************************************************/
 /*
 /* Code Etc
 /*
