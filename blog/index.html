@@ -10,7 +10,7 @@ sitemap:
 	{% for post in paginator.posts %}
 		{% include embedded-post.html %}
 	{% endfor %}
-	<div class="pagination">
+	<div class="page-nav">
 		{% if paginator.next_page %}
 			<a href="{{ paginator.next_page_path }}/" class="older">&laquo; Older</a>
 		{% endif %}

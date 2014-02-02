@@ -10,6 +10,9 @@ h1
 footer
 {
 	margin-top: 3em;
+	padding-top: 0.5em;
+	border-top: 4px double #ccc;
+	text-align: center;
 }
 
 /* Customize container */
@@ -32,7 +35,7 @@ a:hover, a:active
 	text-decoration: underline;
 }
 
-p, article
+p, article, .page-nav
 {
 	font-size: 14pt;
 	line-height: 1.5em;
@@ -173,6 +176,24 @@ article .content
 	margin-top: 1em;
 }
 
+.page-nav
+{
+	border-top: 1px solid #ddd;
+	padding: 1em 0;
+}
+
+.page-nav .previous
+{
+	display: block;
+	float: left;
+}
+
+.page-nav .next
+{
+	display: block;
+	float: right;
+}
+
 /*****************************************************************************/
 /* Blog
 /*****************************************************************************/
@@ -186,6 +207,19 @@ article .content
 {
 	display: none;
 }
+
+.page-nav .older
+{
+	display: block;
+	float: left;
+}
+
+.page-nav .newer
+{
+	display: block;
+	float: right;
+}
+
 
 /*****************************************************************************/
 /* About Me
