@@ -1,3 +1,16 @@
+/*****************************************************************************/
+/* General styles
+/*****************************************************************************/
+h1
+{
+	text-align: center;
+	text-transform: uppercase;
+}
+
+footer
+{
+	margin-top: 3em;
+}
 
 /* Customize container */
 @media (min-width: 768px) 
@@ -8,36 +21,58 @@
 	}
 }
 
-/*****************************************************************************/
-/* Links
-/*****************************************************************************/
 a:link, :visited
 {
-  color: #9C8A6A;
-  text-decoration: none;
+	color: #9C8A6A;
+	text-decoration: none;
 }
-a:hover, a:active{
-  color: #3E372B;
-  text-decoration: underline;
+a:hover, a:active
+{
+	color: #3E372B;
+	text-decoration: underline;
 }
 
+p, article
+{
+	font-size: 14pt;
+	line-height: 1.5em;
+	margin-bottom: 1.75em;
+	color: #444;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 
+{
+	font-family: "minion-pro-1","minion-pro-2","62.5% palatino","times new roman",serif;
+}
 
 /*****************************************************************************/
 /* Page Header
 /*****************************************************************************/
 header
 {
-	padding-top: 15px;
-	color: #9C8A6A;
+	padding-top: 1em;
+	color: #999;
+}
+
+header a:link, header :visited
+{
+	color: #999;
+}
+
+header a:hover, header a:active
+{
+	color: #303030;
+	text-decoration: underline;
 }
 
 header > ul
 {
-	margin: 10px auto;
+	margin: 0.75em auto;
 	border-top: 1px solid #EAEAEA;
 	border-bottom: 1px solid #EAEAEA;
 	text-transform: uppercase;
 	font-size: 1.5em;
+	background: #FBFBFB;
 }
 
 header ul
@@ -50,18 +85,18 @@ header ul
 header li
 {
 	display: inline;
-	margin: 0 10px;
+	margin: 0 1ex;
 }
 
 header li ul
 {
 	display: inline;
-	margin-left: 10px;
+	margin-left: 1ex;
 }
 
 header li ul li
 {
-	margin: 0 3px;
+	margin: 0 0.25ex;
 }
 
 header li ul:before
@@ -87,18 +122,69 @@ header li ul:after
 	}
 }
 
-/*****************************************************************************/
-/* General styles
-/*****************************************************************************/
-h1
+
+article
 {
-	text-align: center;
-	text-transform: uppercase;
+	margin-top: 2em;
+	border-top: 1px solid #ddd;
 }
 
-footer
+article .pub-line
 {
-	margin-top: 3em;
+	text-align: center;
+}
+article .published
+{
+	display: inline-block;
+	position: relative;
+	margin: 0 auto;
+	top: -1em;
+	padding: 0 1ex;
+	font-family: "helvetica neue", helvetica, arial;
+	font-size: 12pt;
+	color: #999;
+	background: #FFF;
+}
+
+/*****************************************************************************/
+/* Posts
+/*****************************************************************************/
+article h1
+{
+	color: #444;
+	text-transform: none;
+}
+
+article h1 a:link, article h1 :visited
+{
+	color: #444;
+}
+
+article .byline
+{
+	text-align: center;
+	font-size: 1.2em;
+	color: #999;
+	margin-bottom: 1em;
+}
+
+article .content
+{
+	margin-top: 1em;
+}
+
+/*****************************************************************************/
+/* Blog
+/*****************************************************************************/
+
+#blog > h1
+{
+	display: none;
+}
+
+#blog article .byline
+{
+	display: none;
 }
 
 /*****************************************************************************/
@@ -107,7 +193,7 @@ footer
 #about-me img
 {
 	float: right;
-	margin-left: 10px;
+	margin-left: 1ex;
 }
 
 section#find-me
