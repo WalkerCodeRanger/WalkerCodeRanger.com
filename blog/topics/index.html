@@ -13,9 +13,10 @@ sitemap:
 <div id="topics">
 	<h1>Topics</h1>
 	<ul>
-		{% for tagSlug in sortedtags %}
-			{% assign tag = tagSlug | replace: '-', ' ' %}
-			<li><a href="/blog/topics/{{tagSlug | downcase}}/">{{tag}}</a> ({{site.tags[tag].size}})</li>
+		{% for escapedTag in sortedtags %}
+			{% assign tag = escapedTag | replace: '-', ' ' %}
+			{% assign tagSlug = escapedTag | downcase | replace: '.net', 'dot-net' | replace: '.', '-' |  %}
+			<li><a href="/blog/topics/{{tagSlug}}/">{{tag}}</a> ({{site.tags[tag].size}})</li>
 		{% endfor %}
 	</ul>
 </div>
