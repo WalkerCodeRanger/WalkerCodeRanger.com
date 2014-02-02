@@ -5,16 +5,19 @@ sitemap:
   changefreq: weekly
   priority: 0.75
 ---
-{% for post in paginator.posts %}
-	{% include embedded-post.html %}
-{% endfor %}
-<div class="pagination">
-	{% if paginator.next_page %}
-		<a href="{{ paginator.next_page_path }}/" class="older">&laquo; Older</a>
-	{% endif %}
-	{% if paginator.previous_page == 1 %}
-		<a href="/blog/" class="newer">Newer »</a>
-	{% elsif paginator.previous_page %}
-		<a href="{{ paginator.previous_page_path }}/" class="newer">Newer &raquo;</a>
-	{% endif %}
+<div id="blog">
+	<h1>Blog</h1>
+	{% for post in paginator.posts %}
+		{% include embedded-post.html %}
+	{% endfor %}
+	<div class="pagination">
+		{% if paginator.next_page %}
+			<a href="{{ paginator.next_page_path }}/" class="older">&laquo; Older</a>
+		{% endif %}
+		{% if paginator.previous_page == 1 %}
+			<a href="/blog/" class="newer">Newer »</a>
+		{% elsif paginator.previous_page %}
+			<a href="{{ paginator.previous_page_path }}/" class="newer">Newer &raquo;</a>
+		{% endif %}
+	</div>
 </div>

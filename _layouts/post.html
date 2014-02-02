@@ -1,7 +1,7 @@
 ---
 layout: page
 ---
-<section class="post">
+<article class="post">
 	<h1>{{ page.title }}</h1>
 	<div>by <span class="author">{{ page.author }}</span></div>
 	<div class="content">
@@ -17,7 +17,7 @@ layout: page
 		{% endif %}
 		</span>
 	</div>
-</section>
+</article>
 <div class="pagNav">
 	{% if page.previous %}
 		<a href="{{ page.previous.url }}/" class="previous">&laquo; Previous</a>

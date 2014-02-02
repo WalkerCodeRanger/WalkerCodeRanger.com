@@ -10,12 +10,12 @@ sitemap:
   {% endfor %}
 {% endcapture %}
 {% assign sortedtags = tags | split:' ' | sort %}
-<section id="topics">
-	<h1>TOPICS</h1>
+<div id="topics">
+	<h1>Topics</h1>
 	<ul>
 		{% for tagSlug in sortedtags %}
 			{% assign tag = tagSlug | replace: '-', ' ' %}
 			<li><a href="/blog/topics/{{tagSlug | downcase}}/">{{tag}}</a> ({{site.tags[tag].size}})</li>
 		{% endfor %}
 	</ul>
-</section>
+</div>
