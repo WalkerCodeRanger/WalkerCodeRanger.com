@@ -96,6 +96,38 @@ h1
 	text-transform: uppercase;
 }
 
+footer
+{
+	margin-top: 3em;
+}
+
+/*****************************************************************************/
+/* About Me
+/*****************************************************************************/
+#about-me img
+{
+	float: right;
+	margin-left: 10px;
+}
+
+section#find-me
+{
+	width: 387px;
+	float: right;
+	clear: right;
+}
+
+section#find-me h3
+{
+	text-align: center;
+}
+
+section#find-me li
+{
+	display: inline;
+	margin: 0 10px 0 50px;
+}
+
 /*****************************************************************************/
 /* Code Etc
 /*****************************************************************************/
