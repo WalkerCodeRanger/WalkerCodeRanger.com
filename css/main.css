@@ -6,6 +6,13 @@ html
 	overflow-y: scroll;
 }
 
+.error
+{
+	font-size: 48pt;
+	color: red;
+	text-align: center;
+}
+
 h1
 {
 	text-align: center;
@@ -224,6 +231,11 @@ article .meta .published, article .meta .topics
 article .meta .no-comments
 {
 	margin-top: 0.5em;
+	text-align: center;
+}
+
+article .meta .comments
+{
 	text-align: center;
 }
 

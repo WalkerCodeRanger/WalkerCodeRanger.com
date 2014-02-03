@@ -2,7 +2,12 @@
 layout: page
 ---
 {% if page.comments == null %}
-	{% assign page.comments = true %}
+	{% assign comments = true %}
+{% else %}
+	{% assign comments = page.comments %}
+{% endif %}
+{% if page.guid == null %}
+<div class="error">Post doesn't have a Guid!</div>
 {% endif %}
 <article class="post">
 	<div class="pub-line"><span class="published">{{ page.date | date: "%B %-d, %Y" }}</span></div>
@@ -21,11 +26,28 @@ layout: page
 			{% endfor %}
 			</span></div>
 		{% endif %}
-		{% if page.comments != true %}
+		{% if comments != true %}
 		<div class="no-comments">Comments Closed</div>
 		{% endif %}
 	</div>
 </article>
+{% if comments %}
+    <div id="disqus_thread"></div>
+	<script type="text/javascript">
+	var disqus_shortname = 'walkercoderanger';
+	var disqus_identifier = '{{page.guid}}';
+	var disqus_url = 'http://WalkerCodeRanger.com{{page.url}}/';
+
+	/* * * DON'T EDIT BELOW THIS LINE * * */
+	(function() {
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+{% endif %}
 <div class="page-nav">
 	{% if page.previous %}
 		<a href="{{ page.previous.url }}/" class="previous">&laquo; Previous</a>
