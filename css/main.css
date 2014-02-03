@@ -31,7 +31,7 @@ h1
 /* begin sticky footer */
 html, body, .container { height: 100%; }
 
-div.page { min-height: 100%; }
+div.page, div.home-page { min-height: 100%; }
 
 div.page-content
 {
