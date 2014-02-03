@@ -9,15 +9,15 @@ layout: page
 	{{ content }}
 	</div>
 	<div class="meta">
-		<span class="pub-line">Published:<span class="published">{{ page.date | date: "%B %-d, %Y" }}</span></span>
+		<div class="pub-line">Published: <span class="published">{{ page.date | date: "%B %-d, %Y" }}</span></div>
 		{% if page.tags != empty %}
-			<span class="topic-line">Topics:<span class="topics">
+			<div class="topic-line">Topics: <span class="topics">
 			{% for tag in page.tags %}
 				{% assign tagSlug = tag | replace: ' ', '-' | downcase | replace: '.net', 'dot-net' | replace: '.', '-' |  %}
-				<a href="/blog/topics/{{tagSlug}}/">{{ tag }}</a>{% unless forloop.last %},{% endunless %}
+				<a href="/blog/topics/{{tagSlug}}/">{{ tag }}</a>{% unless forloop.last %},&nbsp;{% endunless %}
 			{% endfor %}
 		{% endif %}
-		</span></span>
+		</span></div>
 	</div>
 </article>
 <div class="page-nav">

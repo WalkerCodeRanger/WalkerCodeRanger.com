@@ -165,11 +165,11 @@ article
 	border-top: 1px solid #ddd;
 }
 
-article .pub-line
+article > .pub-line
 {
 	text-align: center;
 }
-article .published
+article > .pub-line .published
 {
 	display: inline-block;
 	position: relative;
@@ -204,6 +204,21 @@ article .byline
 article .content
 {
 	margin-top: 1em;
+}
+
+article .meta
+{
+	color: #999;
+}
+
+article .meta .pub-line, article .meta .topic-line
+{
+	text-transform: uppercase;
+}
+
+article .meta .published, article .meta .topics
+{
+	text-transform: none;
 }
 
 .page-nav
