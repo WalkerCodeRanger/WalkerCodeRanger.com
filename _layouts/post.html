@@ -1,6 +1,9 @@
 ---
 layout: page
 ---
+{% if page.comments == null %}
+	{% assign page.comments = true %}
+{% endif %}
 <article class="post">
 	<div class="pub-line"><span class="published">{{ page.date | date: "%B %-d, %Y" }}</span></div>
 	<h1>{{ page.title }}</h1>
@@ -16,8 +19,11 @@ layout: page
 				{% assign tagSlug = tag | replace: ' ', '-' | downcase | replace: '.net', 'dot-net' | replace: '.', '-' |  %}
 				<a href="/blog/topics/{{tagSlug}}/">{{ tag }}</a>{% unless forloop.last %},&nbsp;{% endunless %}
 			{% endfor %}
+			</span></div>
 		{% endif %}
-		</span></div>
+		{% if page.comments != true %}
+		<div class="no-comments">Comments Closed</div>
+		{% endif %}
 	</div>
 </article>
 <div class="page-nav">

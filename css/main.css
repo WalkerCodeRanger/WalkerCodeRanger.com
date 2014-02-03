@@ -211,7 +211,7 @@ article .meta
 	color: #999;
 }
 
-article .meta .pub-line, article .meta .topic-line
+article .meta .pub-line, article .meta .topic-line, article .meta .no-comments
 {
 	text-transform: uppercase;
 }
@@ -219,6 +219,12 @@ article .meta .pub-line, article .meta .topic-line
 article .meta .published, article .meta .topics
 {
 	text-transform: none;
+}
+
+article .meta .no-comments
+{
+	margin-top: 0.5em;
+	text-align: center;
 }
 
 .page-nav
