@@ -2,8 +2,9 @@
 layout: post
 title:  "Welcome to Jekyll!"
 date:   2014-01-26 11:29:27
-categories: jekyll update
 author: "Jeff Walker"
+comments: false
+guid: 1d9ae541-a29c-4c3d-b148-44802594427e
 ---
 
 You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!
