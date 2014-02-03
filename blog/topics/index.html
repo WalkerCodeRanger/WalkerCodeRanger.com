@@ -16,7 +16,7 @@ sitemap:
 		{% for escapedTag in sortedtags %}
 			{% assign tag = escapedTag | replace: '-', ' ' %}
 			{% assign tagSlug = escapedTag | downcase | replace: '.net', 'dot-net' | replace: '.', '-' |  %}
-			<li><a href="/blog/topics/{{tagSlug}}/">{{tag}}</a> ({{site.tags[tag].size}})</li>
+			<li><a href="/blog/topics/{{tagSlug}}/">{{tag}}</a> <span class="count">({{site.tags[tag].size}})</span></li>
 		{% endfor %}
 	</ul>
 </div>
