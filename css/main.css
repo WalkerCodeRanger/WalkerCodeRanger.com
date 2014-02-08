@@ -127,6 +127,11 @@ header ul
 	text-align: center;
 }
 
+header ul a
+{
+	white-space: nowrap;
+}
+
 header li
 {
 	display: inline;
