@@ -177,16 +177,11 @@ header li ul:after
 		margin: 10mm 4mm 15mm 4mm;
 	}
 
-	/*.container
-	{
-		border: 1px dashed red;
-	}*/
-
 	header
 	{
 		padding-top: 0;
 		text-align: center;
-		font-size: 48pt;
+		font-size: 36pt;
 		line-height: 1em;
 		border-bottom: 4px double #ccc;
 	}
@@ -204,6 +199,13 @@ header li ul:after
 	a[href].internal:after
 	{
 		content: none;
+	}
+
+	p, article, li
+	{
+		font-size: 12pt;
+		line-height: 1.25em;
+		color: #000;
 	}
 }
 
@@ -317,6 +319,11 @@ article .meta .tweet
 	{
 		display: none;
 	}
+
+	div#disqus_thread
+	{
+		display: none;
+	}
 }
 
 /*****************************************************************************/
@@ -392,12 +399,13 @@ article .meta .tweet
 #about-me img
 {
 	float: left;
-	margin-right: 1ex;
+	margin-right: 2ex;
 }
 
 section#find-me
 {
 	width: 387px;
+	margin-right: 2ex;
 	float: left;
 	clear: left;
 }
@@ -407,10 +415,29 @@ section#find-me h3
 	text-align: center;
 }
 
-section#find-me li
+@media screen
 {
-	display: inline;
-	margin: 0 10px 0 40px;
+	section#find-me li
+	{
+		display: inline;
+		margin: 0 10px 0 40px;
+	}
+}
+
+@media print
+{
+	#about-me img
+	{
+		width: 5cm;
+		height: auto;
+	}
+	section#find-me
+	{
+		width: 73ex;
+		margin-right: 0;
+		margin-left: 2ex;
+		float: right;
+	}
 }
 
 /*****************************************************************************/
