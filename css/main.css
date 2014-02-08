@@ -90,6 +90,23 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
 	font-family: "minion-pro-1","minion-pro-2","62.5% palatino","times new roman",serif;
 }
 
+/* fudge the badge icon into place */
+.fa-stack.wcr-badge
+{
+	font-size: 14px;
+	position: absolute;
+	height: 18px;
+	width: 53.328125px;
+	top: 3.5555553436279297px;
+	left: -46.22222137451172px;
+	vertical-align: -15%;
+	text-align: center;
+}
+.fa-stack.wcr-badge .fa
+{
+	top: -7px;
+}
+
 /*****************************************************************************/
 /* Page Header
 /*****************************************************************************/
