@@ -1,0 +1,25 @@
+@page
+{
+	margin: 0.5in 0.5in 0.25in 0.25in;
+}
+
+a { text-decoration: none }
+
+a:link { color: #000000 }
+a:active { color: #000000 }
+a:visited { color: #000000 }
+
+body
+{
+	padding: 0;
+}
+
+.section, .experience
+{
+	padding: 1px; /*somehow prevents printing errors */
+}
+
+.breakBefore
+{
+	page-break-before: always;
+}

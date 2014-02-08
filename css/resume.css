@@ -1,0 +1,163 @@
+@import url("reset.css");
+
+body, div
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+}
+
+body
+{
+	padding: 3em 1em;
+}
+
+a:link {color: black}
+a:visited {color: black}
+a:active {color: #3333FF}
+a:hover {color: #3333FF}
+ul { list-style-position: inside; }
+ol { list-style-position: inside; }
+
+.header
+{
+	text-align: center;
+	margin-bottom: 2em;
+}
+
+.header .title
+{
+	font-size: 11pt;
+	font-weight: bold;
+	line-height: 2;
+}
+
+.section
+{
+	page-break-inside: avoid;
+	margin-bottom: 2em;
+}
+
+.section .title
+{
+	font-variant: small-caps;
+	display: block;
+	float: left;
+	width: 14ex;
+}
+
+.section .body
+{
+	margin-left: 14ex;
+}
+
+.skills .item1,
+.skills .item2,
+.skills .item3,
+.skills .item4,
+.skills .item5,
+.skills .item6,
+.skills .item7,
+.skills .item8,
+.skills .item9,
+.skills .item10,
+.skills .item11,
+.skills .item12
+{
+	margin-left: 0ex;
+}
+
+.skills .item13,
+.skills .item14,
+.skills .item15,
+.skills .item16,
+.skills .item17,
+.skills .item18,
+.skills .item19,
+.skills .item20,
+.skills .item21,
+.skills .item22
+{
+	margin-left: 47ex;
+}
+
+.skills li
+{
+	line-height: 1.2em;
+}
+
+.skills .item13
+{
+	margin-top: -14.4em;
+}
+
+.skills .item22,
+.skills .item23,
+.skills .item24
+{
+	visibility: hidden;
+}
+
+.experience
+{
+	margin-bottom: 1em;
+}
+
+.company, .activity
+{
+	float: left;
+}
+
+.name
+{
+	font-weight: bold;
+}
+
+.company .url:before,
+.consulting-company .url:before,
+.activity .url:before
+{
+	content: "(";
+}
+.company .url:after,
+.consulting-company .url:after,
+.activity .url:after
+{
+	content: ")";
+}
+
+.consulting-company
+{
+	margin-left: 1ex;
+}
+
+.consulting-company:before
+{
+	content: "via ";
+}
+.consulting-company .name
+{
+	font-weight: normal;
+	font-style: italic;
+}
+
+.timeframe
+{
+	float: right;
+	font-style: italic;
+}
+
+.experience ul
+{
+	margin-top: .5ex;
+	margin-left: 3ex;
+} 
+
+.education
+{
+	list-style-type: none;
+}
+
+.footer
+{
+	text-align: center;
+}
