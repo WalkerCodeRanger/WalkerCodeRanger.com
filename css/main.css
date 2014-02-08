@@ -159,11 +159,11 @@ header li ul:after
 	{
 		display: block;
 		position: relative;
-		margin: 0 auto;
 		width: 200px;
 		height: 200px;
 		text-indent: -9999px;
 		background-image: url(/images/WalkerCodeRangerBadge.png);
+		float: right;
 	}
 }
 
@@ -267,6 +267,14 @@ article .meta .tweet
 }
 
 /*****************************************************************************/
+/* Home
+/*****************************************************************************/
+#follow-me
+{
+	margin: 0 1em;
+}
+
+/*****************************************************************************/
 /* Blog
 /*****************************************************************************/
 
@@ -293,6 +301,7 @@ article .meta .tweet
 #topics
 {
 	margin-bottom: 1.75em;
+	padding-right: 200px;
 }
 
 #topics ul
@@ -320,7 +329,7 @@ article .meta .tweet
 /*****************************************************************************/
 #archive
 {
-	margin: 0 5em;
+	margin: 0 1em;
 	margin-bottom: 1.75em;
 }
 
@@ -329,15 +338,15 @@ article .meta .tweet
 /*****************************************************************************/
 #about-me img
 {
-	float: right;
-	margin-left: 1ex;
+	float: left;
+	margin-right: 1ex;
 }
 
 section#find-me
 {
 	width: 387px;
-	float: right;
-	clear: right;
+	float: left;
+	clear: left;
 }
 
 section#find-me h3
