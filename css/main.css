@@ -135,7 +135,7 @@ header ul a
 header li
 {
 	display: inline;
-	margin: 0 1ex;
+	margin: 0 0.75ex;
 }
 
 header li ul
