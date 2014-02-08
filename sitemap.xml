@@ -42,7 +42,9 @@ sitemap:
 			{% else %}
 			  <changefreq>monthly</changefreq>
 			{% endif %}
-			{% if page.sitemap.priority %}
+			{% if page.sitemap.latter-page-priority and page.url contains 'page' %}
+				<priority>{{ page.sitemap.page-priority }}</priority>
+			{% elsif page.sitemap.priority %}
 			  <priority>{{ page.sitemap.priority }}</priority>
 			{% else %}
 			  <priority>0.3</priority>
