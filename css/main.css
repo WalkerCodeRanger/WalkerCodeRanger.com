@@ -172,6 +172,19 @@ header li ul:after
 	}
 }
 
+/* change the header for mobile */
+@media (max-width: 400px)
+{
+	header > a
+	{
+		float: none;
+		background-size: 100px;
+		width: 100px;
+		height: 100px;
+		margin: 0 auto;
+	}
+}
+
 @media print
 {
 	@page
