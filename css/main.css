@@ -235,6 +235,14 @@ article > .pub-line .published
 	background: #FFF;
 }
 
+@media print
+{
+	article > .pub-line .published
+	{
+		top: 0;
+	}
+}
+
 article h1
 {
 	color: #444;
