@@ -169,10 +169,26 @@ header li ul:after
 
 @media print
 {
+	@page
+	{
+		size: auto;   /* auto is the initial value */
+
+		/* this affects the margin in the printer settings */
+		margin: 10mm 4mm 15mm 4mm;
+	}
+
+	/*.container
+	{
+		border: 1px dashed red;
+	}*/
+
 	header
 	{
+		padding-top: 0;
 		text-align: center;
-		font-size: 48px;
+		font-size: 48pt;
+		line-height: 1em;
+		border-bottom: 4px double #ccc;
 	}
 
 	header > a[href]:after
