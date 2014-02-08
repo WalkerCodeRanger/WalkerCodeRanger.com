@@ -167,6 +167,30 @@ header li ul:after
 	}
 }
 
+@media print
+{
+	header
+	{
+		text-align: center;
+		font-size: 48px;
+	}
+
+	header > a[href]:after
+	{
+		content: none;
+	}
+
+	header ul
+	{
+		display: none;
+	}
+
+	a[href].internal:after
+	{
+		content: none;
+	}
+}
+
 /*****************************************************************************/
 /* Posts
 /*****************************************************************************/
@@ -264,6 +288,19 @@ article .meta .tweet
 {
 	display: block;
 	float: right;
+}
+
+@media print
+{
+	article .meta .tweet
+	{
+		display: none;
+	}
+
+	.page-nav
+	{
+		display: none;
+	}
 }
 
 /*****************************************************************************/

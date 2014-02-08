@@ -16,11 +16,11 @@ sitemap:
 
 	{% if forloop.first %}
 		<section class="month">
-			<h2><a href="/blog/{{this_year}}/{{this_month_num}}/">{{this_month}} {{this_year}}</a></h2>
+			<h2><a href="/blog/{{this_year}}/{{this_month_num}}/" class="internal">{{this_month}} {{this_year}}</a></h2>
 			<ul>
 	{% endif %}
 
-				<li><a href="{{post.url}}">{{post.title}}</a></li>
+				<li><a href="{{post.url}}" class="internal">{{post.title}}</a></li>
 
 	{% if forloop.last %}
 			</ul>
@@ -29,7 +29,7 @@ sitemap:
 			</ul>
 		</section>
 		<section class="month">
-			<h2><a href="/blog/{{next_year}}/{{next_month_num}}/">{{next_month}} {{next_year}}</a></h2>
+			<h2><a href="/blog/{{next_year}}/{{next_month_num}}/" class="internal">{{next_month}} {{next_year}}</a></h2>
 			<ul>
 	{% endif %}
 {% endfor %}
