@@ -243,6 +243,11 @@ article .meta .comments
 	text-align: center;
 }
 
+article .meta .tweet
+{
+	float: right;
+}
+
 .page-nav
 {
 	border-top: 1px solid #ddd;

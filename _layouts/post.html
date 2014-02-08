@@ -29,6 +29,9 @@ layout: page
 		{% if comments != true %}
 		<div class="no-comments">Comments Closed</div>
 		{% endif %}
+		<div class="tweet">
+			<a href="https://twitter.com/share" class="twitter-share-button" data-via="WalkerCodeRangr" data-url="{{site.url}}{{page.url}}" data-text="{{page.title}}">Tweet</a>
+		</div>
 	</div>
 </article>
 {% if comments %}
