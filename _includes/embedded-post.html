@@ -9,7 +9,7 @@
 	{% if post.comments == null or post.comments %}
 		<div class="comments"><a href="{{post.url}}/#disqus_thread" data-disqus-identifier="{{post.guid}}">comments</a></div>
 	{% else %}
-		<div class="no-comments">Comments Closed</a>
+		<div class="no-comments">Comments Closed</a></div>
 	{% endif %}
 		<div class="tweet">
 			<a href="https://twitter.com/share" class="twitter-share-button" data-via="WalkerCodeRangr" data-url="{{site.url}}{{post.url}}" data-text="{{post.title}}">Tweet</a>
