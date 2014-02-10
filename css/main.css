@@ -73,16 +73,21 @@ a:hover, a:active
 	text-decoration: underline;
 }
 
-p, article, .page-nav, li
+article, p, .page-nav, li
 {
 	font-size: 14pt;
 	line-height: 1.5em;
 	color: #444;
 }
 
-p, article, .page-nav
+article, article p, article ul, .page-nav
 {
 	margin-bottom: 1.75em;
+}
+
+article p+ul
+{
+	margin-top: -1em;
 }
 
 blockquote p
@@ -93,6 +98,11 @@ blockquote p
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 
 {
 	font-family: "minion-pro-1","minion-pro-2","62.5% palatino","times new roman",serif;
+}
+
+cite
+{
+	font-style: italic;
 }
 
 /* fudge the badge icon into place */
@@ -493,29 +503,36 @@ section#find-me h3
 /*****************************************************************************/
 
 /* standard */
-.post pre {
-  border: 1px solid #ddd;
-  background-color: #eef;
-  padding: 0 .4em;
+.post pre
+{
+	border: 1px solid #ddd;
+	background-color: #eef;
+	padding: 0 .4em;
+	color: #000;
 }
 
-.post code {
-  border: 1px solid #ddd;
-  background-color: #eef;
-  padding: 0 .2em;
+.post code
+{
+	border: 1px solid #ddd;
+	background-color: #eef;
+	padding: 0 .2em;
+	color: #000;
 }
 
-.post pre code {
-  border: none;
+.post pre code
+{
+	border: none;
 }
 
 /* terminal */
-.post pre.terminal {
-  border: 1px solid #000;
-  background-color: #333;
-  color: #FFF;
+.post pre.terminal
+{
+	border: 1px solid #000;
+	background-color: #333;
+	color: #FFF;
 }
 
-.post pre.terminal code {
-  background-color: #333;
+.post pre.terminal code
+{
+	background-color: #333;
 }
