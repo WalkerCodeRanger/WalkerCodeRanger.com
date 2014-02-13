@@ -343,7 +343,7 @@ article .meta .comments
 	text-align: center;
 }
 
-article .meta .tweet
+article .meta .subscribe, article .meta .tweet
 {
 	float: right;
 }
