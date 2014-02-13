@@ -22,7 +22,7 @@ layout: page
 			<div class="topic-line">Topics: <span class="topics">
 			{% for tag in page.tags %}
 				{% assign tagSlug = tag | replace: ' ', '-' | downcase | replace: '.net', 'dot-net' | replace: '.', '-' |  %}
-				<a href="/blog/topics/{{tagSlug}}/" class="internal">{{ tag }}</a>{% unless forloop.last %},&nbsp;{% endunless %}
+				<a href="/blog/topics/{{tagSlug}}/" class="internal" rel="tag">{{ tag }}</a>{% unless forloop.last %},&nbsp;{% endunless %}
 			{% endfor %}
 			</span></div>
 		{% endif %}
