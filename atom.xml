@@ -26,5 +26,8 @@ sitemap:
    <content type="html">{{ post.content | xml_escape }}</content>
  </entry>
 {% endfor %}
- 
+ <!-- Delete "Welcome to Jekyll!" post -->
+ <deleted-entry>
+  <id>1d9ae541-a29c-4c3d-b148-44802594427e</id>
+ </deleted-entry>
 </feed>
