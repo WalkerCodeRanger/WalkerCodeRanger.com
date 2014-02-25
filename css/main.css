@@ -122,6 +122,32 @@ cite
 	top: -7px;
 }
 
+aside
+{
+	width: 40ex;
+	border: 1px solid #ddd;
+	background-color: #eef;
+	padding: 0 .5em;
+	color: black;
+	margin-bottom: 1ex;
+}
+
+aside.right
+{
+	float: right;
+	margin-left: 1ex;
+}
+aside.left
+{
+	float: left;
+	margin-right: 1ex;
+}
+
+aside p:last-child
+{
+	margin-bottom: 0.5em;
+}
+
 /*****************************************************************************/
 /* Page Header
 /*****************************************************************************/
@@ -509,6 +535,8 @@ section#find-me h3
 	background-color: #eef;
 	padding: 0 .4em;
 	color: #000;
+	margin-top: -1em;
+	margin-bottom: 1.75em;
 }
 
 .post code
@@ -522,6 +550,7 @@ section#find-me h3
 .post pre code
 {
 	border: none;
+	padding: 0;
 }
 
 /* terminal */
