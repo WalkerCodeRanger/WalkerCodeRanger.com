@@ -5,13 +5,18 @@ author: "Jeff Walker"
 title: "Why TypeScript Isn't the Answer"
 guid: 52814372-82e9-4945-916a-bb2dd7915c7b
 ---
+<div class="with-aside aside-right aside-down-5" markdown="1">
+<div class="aside-placeholder" style="display: none" markdown="1">
+###What is a module?
+Many developers with a background in C# or Java development may not be aware what a module actually is, as opposed to a namespace. A module is very much like a namespace except it can directly contain a method, or variable.  In C# and Java namespaces are really just a way of changing the names of classes to make them unique.  Whereas in TypeScript a module is essentially an object.
+</div>
+I previously wrote about the [minefield that is JavaScript]({% post_url 2014-02-20-javascript-minefield %}){:class="internal"} programming and several possible answers to the problem.  One possible answer is [TypeScript](http://www.typescriptlang.org/). It's an OpenSource project from Microsoft and the language "is a typed superset of JavaScript that compiles to plain JavaScript". It builds on JavaScript by adding classes, modules, interfaces and optional type declarations.  When compiled, the type declarations are erased and ECMAScript 3 compatible code is generated. When possible, TypeScript tries to match syntax and semantics to proposals for ECMAScript 6. Some parts of those proposals are still very much in flux and it's not clear what the final spec will be, so we'll have to see how TypeScript is able to handle that.
 
-<aside markdown="1" class="left">
+<aside markdown="1">
 ###What is a module?
 Many developers with a background in C# or Java development may not be aware what a module actually is, as opposed to a namespace. A module is very much like a namespace except it can directly contain a method, or variable.  In C# and Java namespaces are really just a way of changing the names of classes to make them unique.  Whereas in TypeScript a module is essentially an object.
 </aside>
-
-I previously wrote about the [minefield that is JavaScript]({% post_url 2014-02-20-javascript-minefield %}){:class="internal"} programming and several possible answers to the problem.  One possible answer is [TypeScript](http://www.typescriptlang.org/). It's an OpenSource project from Microsoft and the language "is a typed superset of JavaScript that compiles to plain JavaScript". It builds on JavaScript by adding classes, modules, interfaces and optional type declarations.  When compiled, the type declarations are erased and ECMAScript 3 compatible code is generated. When possible, TypeScript tries to match syntax and semantics to proposals for ECMAScript 6. Some parts of those proposals are still very much in flux and it's not clear what the final spec will be, so we'll have to see how TypeScript is able to handle that.
+</div>
 
 <section markdown="1">
 ##Fixes the Wrong Problem

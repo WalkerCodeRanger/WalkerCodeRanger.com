@@ -9,7 +9,7 @@ layout: page
 {% if page.guid == null %}
 <div class="error">Post doesn't have a Guid!</div>
 {% endif %}
-<article class="post">
+<article class="post" id="{{ page.id | replace: '/blog/', 'post-' | replace: '/', '-' }}">
 	<div class="pub-line"><span class="published">{{ page.date | date: "%B %-d, %Y" }}</span></div>
 	<h1>{{ page.title }}</h1>
 	<div class="byline">by <span class="author">{{ page.author }}</span></div>
