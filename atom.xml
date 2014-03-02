@@ -21,7 +21,11 @@ sitemap:
  <entry>
    <title>{{ post.title }}</title>
    <link href="{{ site.production_url }}{{ post.url }}/"/>
+   {% if post.modified %}
+   <updated>{{ post.modified | date_to_xmlschema }}</updated>
+   {% elsif post.date %}
    <updated>{{ post.date | date_to_xmlschema }}</updated>
+   {% endif %}
    <id>{{ post.guid }}</id>
    <content type="html">{{ post.content | xml_escape }}</content>
  </entry>

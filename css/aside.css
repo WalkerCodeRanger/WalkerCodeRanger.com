@@ -1,0 +1,76 @@
+/*****************************************************************************/
+/* It turns out to be very difficult to place an aside correctly. See:
+/*  http://stackoverflow.com/questions/22109071/position-aside-part-way-up-in-paragraph-with-css/22127561?noredirect=1#22127561
+/*
+/* This approach uses JavaScript to move the element and gives it a different
+/* style if for some reason the JS doesn't move it
+/*****************************************************************************/
+
+/* general appearance */
+aside
+{
+	border: 1px solid #ddd;
+	background-color: #eef;
+	padding: 0 .5em;
+	color: black;
+	margin-bottom: 1ex;
+}
+
+aside p:last-child
+{
+	margin-bottom: 0.5em;
+}
+
+/* an unmoved aside */
+aside
+{
+	margin-left: 5em;
+	margin-right: 5em;
+}
+
+/* an aside that has been moved by jQuery has the class floating */
+aside.floating
+{
+	width: 40ex;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.with-aside.aside-left aside.floating
+{
+	float: left;
+	clear: left;
+	margin-right: 1ex;
+}
+.with-aside.aside-right aside.floating
+{
+	float: right;
+	clear: right;
+	margin-left: 1ex;
+}
+
+.with-aside.floating:before
+{
+	content: "";
+	width: 0;
+	height: 0;
+}
+
+.with-aside.floating.aside-left:before
+{
+	float: left;
+}
+.with-aside.floating.aside-right:before
+{
+	float: right;
+}
+
+/* various down amounts, note the line-height is 1.5em */
+.with-aside.floating.aside-down-4:before
+{
+	height: 6em;
+}
+.with-aside.floating.aside-down-5:before
+{
+	height: 7.5em;
+}
