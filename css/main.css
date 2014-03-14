@@ -122,6 +122,23 @@ cite
 	top: -7px;
 }
 
+/* What series look like */
+.series-note
+{
+	width: 60ex;
+	margin: 0 auto;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	padding: .5em 1em;
+	margin-bottom: 1.75em;
+	background-color: #f4f4ff;
+}
+
+.series-note ul
+{
+	margin-bottom: 1em;
+}
+
 /*****************************************************************************/
 /* Page Header
 /*****************************************************************************/

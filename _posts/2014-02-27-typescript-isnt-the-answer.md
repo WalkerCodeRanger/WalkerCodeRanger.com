@@ -3,6 +3,7 @@ layout: post
 tags: [JavaScript]
 author: "Jeff Walker"
 title: "Why TypeScript Isn't the Answer"
+series: javascript-minefield
 guid: 52814372-82e9-4945-916a-bb2dd7915c7b
 modified: 2014-03-02 15:45 -05:00
 ---
@@ -62,4 +63,4 @@ The above code displays "Hello, undefined" instead of the naively expected "Hell
 I conclude that TypeScript is not the answer.  Or perhaps it's more accurate to say it is the answer to a different problem.  If you love JavaScript, warts and all, but wish it had classes, modules, interfaces and static typing then TypeScript is the answer.  My prediction is that in time people will come to realize TypeScript doesn't eliminate the JavaScript minefield and only makes it more confusing by providing the illusion of safety.  TypeScript will become just another tool along the web development roadside used by a niche market of developers.
 </section>
 
-
+{% include series.html %}
