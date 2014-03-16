@@ -66,6 +66,18 @@ aside.floating
 }
 
 /* various down amounts, note the line-height is 1.5em */
+.with-aside.floating.aside-down-1:before
+{
+	height: 1.5em;
+}
+.with-aside.floating.aside-down-2:before
+{
+	height: 3em;
+}
+.with-aside.floating.aside-down-3:before
+{
+	height: 4.5em;
+}
 .with-aside.floating.aside-down-4:before
 {
 	height: 6em;
