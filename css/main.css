@@ -125,7 +125,7 @@ cite
 /* What series look like */
 .series-note
 {
-	width: 60ex;
+	max-width: 60ex;
 	margin: 0 auto;
 	border: 1px solid #ddd;
 	border-radius: 5px;

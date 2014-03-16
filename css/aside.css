@@ -31,7 +31,7 @@ aside
 /* an aside that has been moved by jQuery has the class floating */
 aside.floating
 {
-	width: 40ex;
+	max-width: 40ex;
 	margin-left: 0;
 	margin-right: 0;
 }
