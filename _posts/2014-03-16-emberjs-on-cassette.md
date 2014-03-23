@@ -5,6 +5,7 @@ author: "Jeff Walker"
 title: "Ember.js on Cassette: Embedding Templates"
 guid: aab2932d-a540-461c-a953-f7ccbb4fe738
 modified: 2014-03-22 10:23 -05:00
+final: true
 ---
 
 <div class="with-aside aside-right aside-down-2" markdown="1">

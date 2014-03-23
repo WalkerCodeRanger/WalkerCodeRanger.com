@@ -6,6 +6,7 @@ title: "Why TypeScript Isn't the Answer"
 series: javascript-minefield
 guid: 52814372-82e9-4945-916a-bb2dd7915c7b
 modified: 2014-03-02 15:45 -05:00
+final: true
 ---
 <div class="with-aside aside-right aside-down-4" markdown="1">
 I previously wrote about the [minefield that is JavaScript]({% post_url 2014-02-20-javascript-minefield %}){:class="internal"} programming and several possible answers to the problem.  One possible answer is [TypeScript](http://www.typescriptlang.org/). It's an OpenSource project from Microsoft and the language "is a typed superset of JavaScript that compiles to plain JavaScript". It builds on JavaScript by adding classes, modules, interfaces and optional type declarations.  When compiled, the type declarations are erased and ECMAScript 3 compatible code is generated. When possible, TypeScript tries to match syntax and semantics to proposals for ECMAScript 6. Some parts of those proposals are still very much in flux and it's not clear what the final spec will be, so we'll have to see how TypeScript is able to handle that.

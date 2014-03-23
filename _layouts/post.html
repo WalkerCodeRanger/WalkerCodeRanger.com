@@ -9,6 +9,9 @@ layout: page
 {% if page.guid == null %}
 <div class="error">Post doesn't have a Guid!</div>
 {% endif %}
+{% unless page.final %}
+<div class="error">Draft</div>
+{% endunless %}
 <article class="post clearfix" id="{{ page.id | replace: '/blog/', 'post-' | replace: '/', '-' }}">
 	<div class="pub-line"><span class="published">{{ page.date | date: "%B %-d, %Y" }}</span></div>
 	<h1>{{ page.title }}</h1>
@@ -49,12 +52,12 @@ layout: page
 	{% endif %}
 </div>
 
-{% if comments %}
+{% if page.final and comments %}
     <div id="disqus_thread"></div>
 	<script type="text/javascript">
 	var disqus_shortname = 'walkercoderanger';
 	var disqus_identifier = '{{page.guid}}';
-	var disqus_url = 'http://WalkerCodeRanger.com{{page.url}}/';
+	var disqus_url = '{{site.url}}{{page.url}}/';
 
 	/* * * DON'T EDIT BELOW THIS LINE * * */
 	(function() {

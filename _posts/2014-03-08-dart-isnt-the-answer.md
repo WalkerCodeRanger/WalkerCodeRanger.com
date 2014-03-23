@@ -5,6 +5,7 @@ author: "Jeff Walker"
 title: "Why Dart Isn't the Answer"
 series: javascript-minefield
 guid: e228a1a9-9305-43be-9749-bf0694827ca6
+final: true
 ---
 
 [Dart](https://www.dartlang.org) is Google's latest answer to how to do large scale web application development.  Dart isn't just a new programming language it is a "platform".  That includes having its own standard libraries and tools.  Additionally, even though Dart compiles to JavaScript, there is also a Dart VM that runs in a preview version of [Chrome](https://www.google.com/chrome) called [Dartium](https://www.dartlang.org/tools/dartium/).  The language itself will feel very familiar to developers who have worked in JavaScript, Java and C#.  Like [TypeScript](http://www.typescriptlang.org) it's "optionally typed".  That means type declarations are optional, but when you provide them the compiler will provide type checking warnings.  Unlike JavaScript, it is class based rather than prototype based. It fixes the problems with both the syntax and semantics of JavaScript
