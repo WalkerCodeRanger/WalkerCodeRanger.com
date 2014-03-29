@@ -5,7 +5,7 @@ author: "Jeff Walker"
 title: "Why CoffeeScript Isn't the Answer"
 series: javascript-minefield
 guid: 497c34ae-a14c-493f-acaa-6f2ef91d152a
-final: false
+final: true
 ---
 [CoffeeScript](http://coffeescript.org/) is an open source project that provides a new syntax for JavaScript.  I have to say that I have a lot of respect for CoffeeScript and it got a lot of things right.  The "golden rule" of CoffeeScript is *"It's just JavaScript"*.  That means there is a straightforward equivalent to every line of CoffeeScript.  Consequently, there aren't as many issues with JavaScript interop as there are with [Dart](https://www.dartlang.org/) (see <cite>[Why I'm Ditching CoffeeScript](http://toshokelectric.com/blog/2013/04/04/why-im-ditching-coffeescript/) </cite> by Chris Toshok for a discussion of how this isn't true for accessor properties and a peek into the politics of open source).  It also makes it easy to deal with any shortcomings in tooling, because the developer should be more comfortable switching between CoffeeScript and the compiled JavaScript, for example, when debugging in the browser without the aid of a source map.  Though CoffeeScript has matured enough that a lot of those shortcomings have been resolved.  Nevertheless, the assurance that you can read the compiled output is comforting.  CoffeeScript programs can be very compact and require less typing.  The language also protects you from many of the [JavaScript land mines](http://www.walkercoderanger.com/blog/2014/02/javascript-minefield/). For example, in CoffeeScript `==` compiles to the strict equality operator `===`, making it impossible to use the dangerous loose equality operator.
 
