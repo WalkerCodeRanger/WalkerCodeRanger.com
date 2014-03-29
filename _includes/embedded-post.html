@@ -1,4 +1,4 @@
-<article class="post" id="{{ post.id | replace: '/blog/', 'post-' | replace: '/', '-' }}">
+<article class="post clearfix" id="{{ post.id | replace: '/blog/', 'post-' | replace: '/', '-' }}">
 	<div class="pub-line"><span class="published">{{ post.date | date: "%B %-d, %Y" }}</span></div>
 	<h1><a href="{{ post.url }}/" class="internal">{{ post.title }}</a></h1>
 	<div class="byline">by <span class="author">{{ post.author }}</span></div>
