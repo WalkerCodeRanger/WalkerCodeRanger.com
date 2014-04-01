@@ -5,7 +5,7 @@ author: "Jeff Walker"
 title: "Why TypeScript Isn't the Answer"
 series: javascript-minefield
 guid: 52814372-82e9-4945-916a-bb2dd7915c7b
-modified: 2014-03-02 15:45 -05:00
+modified: 2014-03-31 21:45 -05:00
 final: true
 ---
 <div class="with-aside aside-right aside-down-4" markdown="1">
@@ -56,6 +56,17 @@ alert(unbound());
 {% endhighlight %}
 
 The above code displays "Hello, undefined" instead of the naively expected "Hello, world".
+
+**Update**  
+A commenter ([alleycat5](http://www.reddit.com/user/alleycat5) on [Reddit](http://www.reddit.com/r/typescript/comments/21qxlh/why_typescript_isnt_the_answer/)) pointed out that TypeScript partially addresses issues with `==` because it will produce type errors for comparisons with `==` when it has type information.
+
+{% highlight javascript %}
+var a = "ssdf";
+var b = 5;
+alert(a==b); // "Operator '==' cannot be applied to types 'string' and 'number'."
+{% endhighlight %}
+
+However, if either variable has type `Object` or `any` it will not produce an error and continues to evaluate loose equality.
 </section>
 
 <section markdown="1">
