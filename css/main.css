@@ -370,10 +370,13 @@ article .meta .subscribe, article .meta .tweet, article .meta .google-plus-one
 	border-top: 1px solid #ddd;
 	border-bottom: 1px solid #ddd;
 	padding-top: 1em;
+	padding-left: 1ex;
+	padding-right: 1ex;
 	margin: 1.5em 0;
+	background-color: #f7f7ff;
 }
 
-.page-nav .previous
+.page-nav .previous, .page-nav .older
 {
 	display: block;
 	float: left;
@@ -381,7 +384,7 @@ article .meta .subscribe, article .meta .tweet, article .meta .google-plus-one
 	margin-bottom: 1em;
 }
 
-.page-nav .next
+.page-nav .next, .page-nav .newer
 {
 	display: block;
 	float: right;
@@ -423,18 +426,6 @@ article .meta .subscribe, article .meta .tweet, article .meta .google-plus-one
 #blog article .byline
 {
 	display: none;
-}
-
-.page-nav .older
-{
-	display: block;
-	float: left;
-}
-
-.page-nav .newer
-{
-	display: block;
-	float: right;
 }
 
 /*****************************************************************************/
