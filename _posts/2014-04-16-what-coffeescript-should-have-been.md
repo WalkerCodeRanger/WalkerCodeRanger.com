@@ -2,10 +2,11 @@
 layout: post
 tags: [JavaScript]
 author: "Jeff Walker"
-title: "The JavaScript Minefield: A Proposal"
+title: "What I Think CoffeeScript Should Have Been"
 series: javascript-minefield
 guid: 6af478db-fa08-4a47-9f4d-5786a5fa9b3b
 final: true
+redirect_from: "/blog/2014/04/javascript-minefield-a-proposal/"
 ---
 In the first post of this series I laid out why [JavaScript is like a minefield](http://www.walkercoderanger.com/blog/2014/02/javascript-minefield/).  In subsequent posts I laid out why I believe that [TypeScript](http://www.walkercoderanger.com/blog/2014/02/typescript-isnt-the-answer/), [Dart](http://www.walkercoderanger.com/blog/2014/03/dart-isnt-the-answer/) and [CoffeeScript](http://www.walkercoderanger.com/blog/2014/03/coffeescript-isnt-the-answer/) are not the answer to the problems posed by the JavaScript Minefield.  I then took a post to consider whether [JavaScript linters are the answer](http://www.walkercoderanger.com/blog/2014/03/coffeescript-isnt-the-answer/); they're not.  That has finally brought us to the point where we are ready to discuss some ideas I have about what an answer to the JavaScript minefield might look like.
 

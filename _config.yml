@@ -10,3 +10,5 @@ title: "Walker Code Ranger Blog"
 author:
   name: Jeff Walker Code Ranger
   email: Jeff@WalkerCodeRanger.com
+gems:
+  - jekyll-redirect-from
