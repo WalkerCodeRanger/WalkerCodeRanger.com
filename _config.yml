@@ -1,6 +1,6 @@
 name: Walker Code Ranger
 markdown: kramdown
-pygments: true
+highlights: pygments
 encoding: UTF-8
 permalink: /blog/:year/:month/:title
 paginate: 5
