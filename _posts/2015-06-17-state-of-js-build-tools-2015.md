@@ -39,7 +39,7 @@ Here is a brief list of the steps/actions I expect will be present in most JavaS
 * Serve: running a development web server
 * Running Unit Tests
 * Running JavaScript and CSS Linters: jshint, csslint etc.
-* Dependencies: cleanly handle dependencies on npm and Bower packages, Browserfy etc. 
+* Dependencies: handle dependencies on npm and Bower packages, Browserfy etc.
 </section>
 
 <section markdown="1">
