@@ -161,3 +161,8 @@ ol { list-style-position: inside; }
 {
 	text-align: center;
 }
+
+.keep-together
+{
+	white-space: nowrap;
+}

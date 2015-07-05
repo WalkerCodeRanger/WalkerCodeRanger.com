@@ -19,6 +19,11 @@ body
 	padding: 1px; /*somehow prevents printing errors */
 }
 
+.company, .activity
+{
+	white-space: nowrap;
+}
+
 .breakBefore
 {
 	page-break-before: always;
