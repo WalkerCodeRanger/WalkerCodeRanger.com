@@ -123,13 +123,14 @@ extern crate primes;
 
 This exposes the contents of the primes crate to your code in a module named `primes`.
 
-Something important to know that isn't stated in the [docs](https://doc.rust-lang.org/stable/book/crates-and-modules.html) right now is that many crates have dashes in their names, but dashes are not allowed in module names.  Consequently, there is a special syntax for pulling in a crate with a dash in its name.
+
+Something important to know, that isn't stated in the [docs](https://doc.rust-lang.org/stable/book/crates-and-modules.html) right now, is that many crates have dashes in their names, but dashes are not allowed in module names.  When using one of these crate you use the name with dashes in the `Cargo.toml` file like `media-types = "0.1.0"`.  However, when referencing the crate from code, replace the dashes with underscores.  You can also use `as` to bring any crate in as a different module name.
 
 {% highlight rust %}
-extern crate "media-types" as media_types;
+extern crate media_types as mt;
 {% endhighlight %}
 
-Note that in the module name after the `as` keyword we have replaced the dash in the crate name with an underscore to give a valid module name.  This [may be changed](https://internals.rust-lang.org/t/pre-rfc-resolve-support-for-hyphens-in-crate-names/1459) in future versions of Rust.
+Note that the dash in the crate name is replaced with an underscore to give a valid module name.  This also shows bringing the module name in as "mt".  Older versions of Rust handled this differently, so you may see some examples with the old syntax that uses double quotes.
 </section>
 
 <section markdown="1">
@@ -140,5 +141,13 @@ Earlier, I mentioned that modules, unlike namespaces, can contain static variabl
 static NAME: &'static str = "Jeff";
 {% endhighlight %}
 
-Notice the special lifetime `'static` that all static variables have.  In addition to the special static lifetime, they have a number of restrictions that let bindings do not.  Their type must always be specified.  Accessing a mutable static is an unsafe operation because other threads could be modifying it at the same time.  Their value must be initialized to a constant expression.  Finally, they can't implement `Drop`.  These restrictions ensure thread safety and [avoid the complex issues that C# and Java have with static initializers](https://doc.rust-lang.org/complement-design-faq.html#there-is-no-life-before-or-after-main-(no-static-ctors/dtors)) and clean up of statics on program exit.
+Notice the special lifetime `'static` that all static variables have.  In addition to the special static lifetime, they have a number of restrictions that let bindings do not.  Their type must always be specified.  Accessing a mutable static is an unsafe operation because other threads could be modifying it at the same time.  Their value must be initialized to a constant expression.  Finally, they can't implement `Drop`.  These restrictions ensure thread safety and [avoids the complex issues that C# and Java have with static initializers](https://doc.rust-lang.org/complement-design-faq.html#there-is-no-life-before-or-after-main-(no-static-ctors/dtors)) and clean up of statics on program exit.
 </section>
+
+<section markdown="1">
+## Paths
+I've already shown several examples of the `use` keyword.  It is important to note that it brings into scope the final name in the path.  That is the name after the last pair of colons.  This differs from the C# `using` keyword which brings in all the contents of the namespace listed after using.  Given the ability to re-export names with public use statements it makes more sense for it to work that way.  Like with using statements, the module path of use is always relative to the root module.  However, when using paths other places in code they are relative to the current module.  There are a number of useful options available for the use statement.  I encourage you to read about them in the [docs for use](https://doc.rust-lang.org/stable/book/crates-and-modules.html#importing-modules-with-use).  In addition, you can use the `as` keyword with use in the same way as with extern crate.
+</section>
+
+
+**Edit 2015-08-30:** Corrected explanation of dashes in crate names to reflect current version.  Added "Paths" section based on feedback from the [Rust subreddit](https://www.reddit.com/r/rust).
