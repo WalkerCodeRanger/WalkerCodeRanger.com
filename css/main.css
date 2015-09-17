@@ -334,6 +334,11 @@ article .content
 	margin-top: 1em;
 }
 
+article img
+{
+	max-width: 100%;
+}
+
 article .meta
 {
 	color: #999;

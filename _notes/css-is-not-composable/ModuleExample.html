@@ -1,0 +1,21 @@
+<html>
+<body>
+	<style>
+		.cf:before,
+		.cf:after {
+			content: " "; /* 1 */
+			display: table; /* 2 */
+		}
+
+		.cf:after {
+			clear: both;
+		}
+	</style>
+
+	<div style="border: 2px solid black; margin 10px; padding: 10px" class="cf">
+
+	<div style="height: 75px; width: 125px; margin-left: 10px; margin-bottom: 10px; background-color: lightgray; float: right; text-align: center; padding-top:50px">Floating</div>
+	<p style="margin: 0">Nulla sagittis tincidunt tortor, consectetur aliquam felis commodo nec. Etiam a mauris lorem. Aliquam et convallis lacus. Vestibulum molestie tellus arcu, quis congue lorem porta id. In at imperdiet sapien, in ultricies libero. Nullam nec ultricies ipsum. Etiam malesuada, nisl nec vestibulum lobortis, elit mi congue nunc, eu aliquam ex metus eu sapien. Nulla ullamcorper dolor vel nunc eleifend placerat.</p>
+	</div>
+</body>
+</html>
