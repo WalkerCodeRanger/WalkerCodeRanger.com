@@ -3,7 +3,6 @@ layout: post
 tags: [CSS]
 author: "Jeff Walker"
 title: "CSS is Not Composable"
-series: css-is-not-composable
 guid: 4b0a9a55-04c0-4d7d-952c-03cb8120e392
 final: true
 ---
