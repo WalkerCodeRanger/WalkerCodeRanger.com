@@ -109,11 +109,11 @@ Notice that in `mod.rs` the two modules are not declared with `pub`.  They defau
 
 <section markdown="1">
 ## Crates
-Up to this point, we have talked about modules within your own code.  However, it won't be long before you want to use modules written by other people.  These are packaged in what Rust calls "crates".  A crate is a library or executable and is the equivalent of the .NET assembly concept.  The closest equivalent in Java would be `.jar` files. They are also the unit of publishing packages like Nuget packages in .NET.  You can browse the published crates at [crates.io](https://crates.io/).  If you wanted to use the `signal` crate (to pick a random example).  Simply add to your `Cargo.toml` file the lines:
+Up to this point, we have talked about modules within your own code.  However, it won't be long before you want to use modules written by other people.  These are packaged in what Rust calls "crates".  A crate is a library or executable and is the equivalent of the .NET assembly concept.  The closest equivalent in Java would be `.jar` files. They are also the unit of publishing packages like Nuget packages in .NET.  You can browse the published crates at [crates.io](https://crates.io/).  If you wanted to use the `primes` crate (to pick a random example).  Simply add to your `Cargo.toml` file the lines:
 
 {% highlight toml %}
 [dependencies]
-signal = "0.1.0"
+primes = "0.2.0"
 {% endhighlight %}
 
 Then from the code you import the crate with:
