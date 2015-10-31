@@ -1,6 +1,6 @@
 ---
 layout: post
-tags: [Open-Source]
+tags: ["Open-Source"]
 author: "Jeff Walker"
 title: "Advice for Open-Source Projects"
 guid: e6f11d4f-f9c9-4c76-ac7d-9f5877c6544b
