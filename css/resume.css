@@ -33,7 +33,6 @@ ol { list-style-position: inside; }
 
 .section
 {
-	page-break-inside: avoid;
 	margin-bottom: 2em;
 }
 
@@ -100,6 +99,7 @@ ol { list-style-position: inside; }
 .experience
 {
 	margin-bottom: 1em;
+	page-break-inside: avoid;
 }
 
 .company, .activity
