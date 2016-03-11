@@ -6,7 +6,7 @@ sitemap:
 ---
 {% capture tags %}
   {% for tag in site.tags %}
-    {{ tag[0] | replace: ' ', '-' }}
+    {{ tag[0] | replace: ' ', '_' }}
   {% endfor %}
 {% endcapture %}
 {% assign sortedtags = tags | split:' ' | sort %}
@@ -14,8 +14,8 @@ sitemap:
 	<h1>Topics</h1>
 	<ul>
 		{% for escapedTag in sortedtags %}
-			{% assign tag = escapedTag | replace: '-', ' ' %}
-			{% assign tagSlug = escapedTag | downcase | replace: '.net', 'dot-net' | replace: '.', '-' |  %}
+			{% assign tag = escapedTag | replace: '_', ' ' %}
+			{% assign tagSlug = escapedTag | downcase | replace: '.net', 'dot-net' | replace: '.', '-' | replace: 'c#', 'c-sharp' %}
 			<li><a href="/blog/topics/{{tagSlug}}/" class="internal">{{tag}}</a> <span class="count">({{site.tags[tag].size}})</span></li>
 		{% endfor %}
 	</ul>
