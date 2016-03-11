@@ -1,7 +1,7 @@
 ---
 layout: page
 ---
-<section id="topic-{{page.topic | replace: ' ', '-' | downcase}}" class="blog-topic">
+<section id="topic-{{page.topic | downcase | replace: ' ', '-' | replace: '.net', 'dot-net' | replace: 'c#', 'c-sharp' | replace: '.', '-' }}" class="blog-topic">
 	{% if page.topic-title != null %}
 	<h1>Topic: {{page.topic-title}}</h1>
 	{% else %}
@@ -21,7 +21,7 @@ layout: page
 			<ul>
 	{% endif %}
 
-				<li><a href="{{post.url}}/" class="internal">{{post.title}}</a></li>
+				<li><a href="{{post.url}}" class="internal">{{post.title}}</a></li>
 
 	{% if forloop.last %}
 			</ul>
