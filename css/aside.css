@@ -13,7 +13,7 @@ aside
 	background-color: #eef;
 	padding: 0 .5em;
 	color: black;
-	margin-bottom: 1ex;
+	margin-bottom: 1.5ex;
 }
 
 aside p:last-child
@@ -31,7 +31,7 @@ aside
 /* an aside that has been moved by jQuery has the class floating */
 aside.floating
 {
-	max-width: 40ex;
+	max-width: 120ex;
 	margin-left: 0;
 	margin-right: 0;
 }
@@ -40,13 +40,13 @@ aside.floating
 {
 	float: left;
 	clear: left;
-	margin-right: 1ex;
+	margin-right: 1.5ex;
 }
 .with-aside.aside-right aside.floating
 {
 	float: right;
 	clear: right;
-	margin-left: 1ex;
+	margin-left: 1.5ex;
 }
 
 .with-aside.floating:before

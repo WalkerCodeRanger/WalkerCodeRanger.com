@@ -131,7 +131,7 @@ cite
 /* What series look like */
 .series-note
 {
-	max-width: 60ex;
+	max-width: 220ex;
 	margin: 0 auto;
 	border: 1px solid #ddd;
 	border-radius: 5px;
