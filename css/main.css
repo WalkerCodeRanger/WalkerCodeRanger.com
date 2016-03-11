@@ -375,6 +375,12 @@ article .meta .comments
 article .meta .subscribe, article .meta .tweet, article .meta .google-plus-one
 {
 	float: right;
+	margin-right: 4ex;
+}
+
+article .meta .subscribe
+{
+	margin-right: -11px; /* get rid of extra space from feed press */
 }
 
 .page-nav
