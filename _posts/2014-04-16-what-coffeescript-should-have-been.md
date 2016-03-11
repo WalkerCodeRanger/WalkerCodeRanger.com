@@ -31,7 +31,7 @@ Let's explore each and see how they might be embodied in some proposed syntax. P
 ## It's Just JavaScript, but Better
 The example of CoffeeScript has clearly shown the advantages of an "It's Just JavaScript" approach.  A clear and direct mapping between the language and JavaScript makes it easy for the developer to understand what is happening and what they can expect.  It aids early adoption when support for source maps may not be available yet.  It provides a clear path to JavaScript interoperability.  Importantly, this approach greatly simplifies the problem for an Open Source project that doesn't have the resources to tackle a whole new platform approach the way Google has done with Dart.  However, being just JavaScript doesn't preclude deviations in semantics, not just syntax. CoffeeScript often shows an unwillingness to change JavaScript's semantics even when it would be easy to do so and provide significant improvements to the developer.  Instead we should strive to improve on JavaScript semantics when possible.  That's why, rather than "It's Just JavaScript" or even "It's Just JavaScript, the Good Parts" I propose "It's Just JavaScript, but Better".
 
-###Proposed Syntax
+### Proposed Syntax
 In syntax, "boring" is good.  Deviating from syntax that is widely known without a good reason will probably just confuse people and hurt language adoption.  I propose a largely C-style syntax with proper variable scoping.  That is to say, you can't use a variable or function before it is declared or outside the scope it is declared in.  C# has carefully considered a lot of the issues and won't, for example, allow one to shadow a variable or parameter in a method with another in the method.  Scoping should just *work*, not cause any surprises and protect against unintended behaviour. Semicolons should be required statement terminators and white-space shouldn't be significant.  Parenthesis, commas and curly braces are required in the same places languages like Java, C# and JavaScript require them.  All of that creates a language that is clear, unambiguous, easy to read and fast to compile.
 
 {% highlight javascript %}
@@ -67,10 +67,10 @@ $('#myButton').click(); // because of 'use' the '$' doesn't need '::' before it
 </section>
 
 <section markdown="1">
-##Syntax Matters
+## Syntax Matters
 The words you use for something matter.  Words and syntax can either aid in comprehension and remind us of how things work, or can obscure meaning and consistently mislead.  Having syntax for something can change how you think about it, how often you use it and ultimately how you program.  The first time I remember being truly struck by that was when [anonymous inner classes](http://docs.oracle.com/javase/tutorial/java/javaOO/anonymousclasses.html) were added to Java.  For those not familiar with Java, that feature allows one to create an unnamed "class" inside a method and instantiate an instance of it that has access to the containing scope.  It is very much like being able to declare an object literal inside a function in JavaScript and have access to the function closure.  In Java, there are enough restrictions on anonymous classes to make for a straight forward translation to Java without that feature.  In fact, that is how the compiler implements it.  Nevertheless, this feature provided syntax for something and changed how most people wrote Java code even though it didn't strictly add any capabilities.  It was always possible to do before, but was so awkward that it was rarely done.  For JavaScript the situation is a little different.  With JavaScript there is certain semantics that we will not be able to change without too great a performance or complexity penalty.  In those cases, we need to come up with syntax that clarifies the semantics of JavaScript.
 
-###Proposed Syntax
+### Proposed Syntax
 I have repeatedly raised the issue of the confusing semantics of `this` in JavaScript.  Attempts to improve JavaScript have generally made no attempt to address this issue.  One of the two pillars of my approach is a new syntax for `this`.  In other object oriented languages, `this` *always* refers to the current instance of the class lexically containing the occurrence of `this`.  In JavaScript, it actually has a significantly different meaning, but the value of `this` ends up being equal to what it would have been given the more common definition in many situations.  That is the root of the confusion.  In order to create a syntax that clarifies this, we must first ask what are the semantics of `this` in JavaScript.  The value of `this` can be determined in four different ways.  Namely, through invoking a function after the `.` operator, invoking the function with a value for `this` using `call` or `apply`, or by invoking it as a constructor function using the `new` operator. Additionally, it can be fixed to a particular value by calling `bind`.  The value of this could be better termed the *context* of the function call.  A further confusion arises when functions are nested and have different contexts.  In that situation, it is far too easy to accidentally reference the wrong context with `this`, because one forgets that the context of the nested function is different from the context of the outer function.  This mistake is so frequently made because the more common definition of `this` is lexically based and the nested function is lexically nested, so it seems it should have the same context.  I propose that both of these issues can be clarified by making the context a special named parameter of the function.  Perhaps listed before the other parameters and separated from the rest by a dot rather than a comma, since the most common way of establishing the context of a function is with the dot operator.
 
 {% highlight javascript %}
@@ -87,10 +87,10 @@ A fully defined JavaScript alternative would probably have many other niceties l
 </section>
 
 <section markdown="1">
-##Embrace Prototypes
+## Embrace Prototypes
 JavaScript doesn't have classes.  Instead it has object prototypes and constructor functions.  Yet, many developers yearn for classes and try to extend JavaScript with class like functionality.  However each implementation of classes in JavaScript is different and [many are incompatible with each other](http://www.bennadel.com/blog/2180-Your-Javascript-Constructor-Logic-May-Break-Prototypal-Inheritance.htm). JavaScript developers can't even agree on whether/how to use the `new` keyword and declare constructors.  As many authors, including [Douglas Crockford](http://javascript.crockford.com/prototypal.html), have noted, it is much simpler to embrace the prototype based nature of JavaScript and avoid not only classes but constructor functions by using `Object.create(...)` to directly setup prototype chains.  David Walsh has a great three part write up on this (part [1](http://davidwalsh.name/javascript-objects), [2](http://davidwalsh.name/javascript-objects-distractions), [3](http://davidwalsh.name/javascript-objects-deconstruction)).  By accepting this simple truth and embracing it we can greatly simplify both the semantics and syntax of our language. Following the principle that syntax matters we need a syntax that clarifies this.  We can further simplify our language if we accept that JavaScript doesn't have private properties (at least without introducing a reasonable amount of overhead).
 
-###Proposed Syntax
+### Proposed Syntax
 I think the syntax for objects is important and while I propose a concrete syntax here, I think there is further room for improvement.  A syntax for prototypical inheritance is the second pillar of my approach. The essential idea is that all object construction is through object literals, we simply need a way to specify the prototype object when declaring an object literal.  Additionally, our syntax can be much clearer if object literals have a clearly distinct syntax from function bodies (this is needed to support the lambda expression style syntax described before). 
 
 {% highlight javascript %}
@@ -214,12 +214,12 @@ var empty = {%};
 </section>
 
 <section markdown="1">
-##Interoperate, don't Imitate
+## Interoperate, don't Imitate
 The last principle that I propose guides how this new language should interoperate with JavaScript and whether it needs to be powerful enough to express every valid JavaScript program.  I think interoperability with all JavaScript features is critical.  We simply can't predict how libraries will make use of JavaScript features and must make sure that they can't break the user experience of our language.  For example,  I think it is very bad that CoffeeScript assumes property access is side effect free and idempotent (returns the same value repeatedly). Those are simply not true if the property is actually a getter.  While no code written in CoffeeScript will have getters, libraries will increasingly use them as a larger percentage of installed browsers support them. Decisions like that could easily be the downfall of a language.  What if the next great library, the next "jQuery" relies on them heavily?  That could be the end of CoffeeScript, or at least a very painful transition for CoffeeScript users as the problem was fixed.
 
 While interoperability is critical, that doesn't mean it must be necessary to fully use every language feature.  I have already proposed abandoning the ability to directly use the `new` operator or to easily declare constructor functions.  It may be the case that not every property attribute or operator is important to have.
 
-###Proposed Syntax
+### Proposed Syntax
 While there should be no `new` operator.  It would be possible to invoke constructor functions declared in other libraries by using them in place of object prototypes.
 
 {% highlight javascript %}
@@ -230,7 +230,7 @@ Another way the language can "Interoperate, not Imitate", is to provide function
 </section>
 
 <section markdown="1">
-##What Now?
+## What Now?
 Having laid out these principles and proposed some concrete syntax based on them, the question becomes where do we go from here?  I am seriously considering whether it is worth the effort of creating another JavaScript alternative.  I have always been interested in programming languages and have the experience necessary to implement a compiler.  However, I also know what a large commitment a project like that would be.  Were I to start such a project, I would probably try to have an open dialogue process where people could provide input into language features and syntax and reasons for design decisions could be documented.
 
 Gauging interest in another JavaScript alternative has been a major motivation in writing this series of articles.  To that end, please take a moment to answer the question below.  Furthermore, if you would be interested in contributing to such a language in any capacity whether it be coding, managing or design input please [email me](mailto:Jeff@WalkerCodeRanger.com).

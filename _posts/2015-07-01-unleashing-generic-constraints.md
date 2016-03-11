@@ -10,7 +10,7 @@ final: true
 A number of of times in my career, I have found my work frustrated by the sometimes arbitrary limitations placed on generics in C#.  The addition of generic covariance and contravariance was a big step forward in that regard. Still, there remain many frustrating limitations.  The fact that you can't use `Enum` or `Delegate` as a generic constraint can be worked around using packages like [ExtraConstrains.Fody](https://github.com/Fody/ExtraConstraints) or [UnconstrainedMelody](https://github.com/jskeet/unconstrained-melody).  However, extension methods also provide a little known way of working around some limitations.  It is so little known that I couldn't find a blog post that discussed the technique while working on this one (though I think I recall reading one once).  Indeed, these over 2 year old [stockoverflow.com](stackoverflow.com) questions "[Is it possible to constrain a C# generic method type parameter as 'assignable from' the containing class' type parameter?](http://stackoverflow.com/q/11255558/268898)" and "[Constrain type parameter to a base type](http://stackoverflow.com/q/18596387/268898)" had no answers showing this approach until I [answered](http://stackoverflow.com/a/31049732/268898) [them](http://stackoverflow.com/a/31050333/268898) while writing this.
 
 <section markdown="1">
-##An Example
+## An Example
 Imagine we create a generic pair class that we will use any time we want to deal with a pair of values that may or may not be of the same type.
 
 {% highlight csharp %}

@@ -13,7 +13,7 @@ final: true
 The strengths of CoffeeScript were the reason that I argued for its use on the last project I was part of.  Indeed, we adopted CoffeeScript and used the [Mindscape Web Workbench](http://www.mindscapehq.com/products/web-workbench) extension for Visual Studio which compiled on save.  For me, the compile on save was helpful in learning CoffeeScript because I could immediately see what the resulting JavaScript was without firing up a browser, as required by many of the other options that compile on the fly as part of an asset pipeline.  If you're seeking a similar approach you might also want to check out the popular [Web Essentials](http://vswebessentials.com/) plug-in.  Though I found merging the compiled JavaScript files to by annoying enough that I am now moving away from that approach.  I spent 6+ months on that project learning and working in CoffeeScript.  Out of [TypeScript](http://www.typescriptlang.org/), [Dart](https://www.dartlang.org/) and [CoffeeScript](http://coffeescript.org/) I really can speak to the strengths and weaknesses of the last from experience.  That experience has led me away from using CoffeeScript on my current project.
 
 <section markdown="1">
-##Ambiguous Code
+## Ambiguous Code
 
 I quickly found that there were situations where I couldn't predict what a given chunk of CoffeeScript would compile to or couldn't figure out how to write the CoffeeScript for the JavaScript I wanted.  The problem arises because in CoffeeScript parenthesis, curly braces and commas are often optional and white-space and indention replace them.  Frequently code I thought should compile didn't.  Consider this valid code.
 
@@ -41,12 +41,12 @@ How about something like `func1 1, func2 2, 3`? Does 3 get passed to the first o
 </section>
  
 <section markdown="1">
-##Readable, Think Again
+## Readable, Think Again
 Ambiguous code is only one part of what makes CoffeeScript difficult to read. Everything is an expression (returns a value) and it has lots of control flow and operator aliases.  All of which encourages very English sentence like code.  However, that often makes the code less readable, not more.  The human mind is good at understanding logic in symbols; English is not good at expression logic.  As an example, consider the line `eat food for food in foods when food isnt 'chocolate'` from the [CoffeeScript tutorial](http://coffeescript.org/#loops).  The declaration of what food is occurs in the middle of the line and doesn't even look like a variable declaration.  Furthermore, until you finish reading the line it isn't clear which foods will be eaten.  That code could easily be worse if `unless eat is undefined` was added to the end, making the whole line conditional.  One wouldn't realize it was conditional until reading the end.  Imagine if the expression before the `for` had been a complex multi-line method call with logic in it.  Ryan Florence digs deeper into these issues in his post <cite>[A Case Against Using CoffeeScript](http://ryanflorence.com/2011/case-against-coffeescript/)</cite>.  Suffice it to say, many of the features added to CoffeeScript with the intent of making it "readable" actually have the opposite effect.
 </section>
 
 <section markdown="1">
-##Variable Capture
+## Variable Capture
 In addition to the these confusions, CoffeeScript actually creates new mines that aren't present in JavaScript at all.  As explained by Jesse Donat in <cite>[CoffeeScript's Scoping is Madness](https://donatstudios.com/CoffeeScript-Madness)</cite>, in CoffeeScript's zeal for terseness and "simplicity" it has actually created a major pitfall around variable declarations.  In CoffeeScript there is no variable declaration syntax equivalent to `var` in JavaScript.  Instead, all variables are declared in the scope they are first assigned in.  This means it is easy to accidentally change the scope of a variable and not even realize it.
 
 To see how this would happen, imagine you are in a hurry to implement the next feature. Unbeknownst to you, the following code is near the bottom of the file you are about to modify.
@@ -85,12 +85,12 @@ Did you catch the error?  Originally, `lastValue` was local to the `innocent` fu
 </section>
 
 <section markdown="1">
-##Not Far Enough
+## Not Far Enough
 Certainly, a language that is "just JavaScript" won't be able to fix everything. Yet, despite radically altering the syntax of JavaScript and claiming to only expose the good parts of JavaScript, in some ways CoffeeScript doesn't go far enough in fixing the issues of JavaScript. For example, the `+` operator is still both numeric addition and string concatenation.  That is frequently listed as one of the bad parts of JavaScript.  Why no provide separate operators for the two?   Likewise, the `typeof` operator "is probably the biggest design flaw of JavaScript, as it is almost completely broken" according to the [JavaScript Garden](http://bonsaiden.github.io/JavaScript-Garden/#types.typeof), but CoffeeScript brings its behaviour over unchanged.  Instead CoffeeScript could have altered the meaning of `typeof` to something that was more useful, for example the `typeOf()` function [recommend by Douglas Crockford](http://javascript.crockford.com/remedial.html).
 </section>
 
 <section markdown="1">
-##Classes Are an Illusion
+## Classes Are an Illusion
 
 Many developers wish that JavaScript had classes.  This has led to numerous alternative ways to emulate class like functionality in JavaScript and libraries that embody those various approaches.  Many of the different approaches don't interact well with each other.  There is even debate on whether to use constructors requiring the `new` keyword or to make everything a factory function.
 CoffeeScript has a `class` keyword that makes it easy to create classes.  However, since "it's just JavaScript" they are just one particular emulation of classes on top of JavaScript.  Consequently, they may not play well with your library of choice.  More troublesome is that they make other language features more confusing.  In particular the `this` keyword.  When creating a class you can't help but feel that `this` should refer to the class everywhere within the body of the class.  That is what it would mean for something to be a *class*.  But the actual semantics of `this` are unchanged. For example, if you declare a class with methods using `this`.
@@ -128,7 +128,7 @@ Ultimately, JavaScript isn't a class based language and classes never quite work
 </section>
 
 <section markdown="1">
-##And So...
+## And So...
 CoffeeScript started from a strong position and good philosophical approach to the problem of the [JavaScript Minefield](http://www.walkercoderanger.com/blog/2014/02/javascript-minefield/).  Unlike TypeScript, it was willing to break with JavaScript and fix its issues.  Unlike Dart, it was intended to remain true to JavaScript and be fully interoperable.  Realistically, the issues I have raised with CoffeeScript don't come up every day.  Ultimately though, they are enough to say we need something better.  I hope to share some thoughts soon on what such a solution might look like.  However, based on feedback in the comments, we'll need to discuss JavaScript linters first.
 </section>
 

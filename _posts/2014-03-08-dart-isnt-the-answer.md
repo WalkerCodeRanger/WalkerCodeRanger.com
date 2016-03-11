@@ -36,7 +36,7 @@ To dig deeper, check out <cite markdown="1">[Why Dart is not the language of the
 </section>
 
 <section markdown="1">
-##Not the Answer
+## Not the Answer
 Previously we saw <cite>[Why TypeScript Isn't the Answer]({% post_url 2014-02-27-typescript-isnt-the-answer %})</cite>, today we have seen that neither is Dart the answer.  It is much more ambitious and addresses many more of the JavaScript mines, but ultimately, it will be doomed to go the same way as GWT and not be a major player in web development. That is mostly a consequence of it's separate platform approach, but also because of a few poor choices in the design of that platform.
 </section>
 
