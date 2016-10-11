@@ -380,6 +380,12 @@ article .meta .subscribe, article .meta .tweet, article .meta .google-plus-one
 
 article .meta .subscribe
 {
+	margin-right: 0; /* no margin for the rightmost button */
+	overflow-x: hidden; /* hide the space removed from the feedpress-button */
+}
+
+article .meta .subscribe > .feedpress-button
+{
 	margin-right: -11px; /* get rid of extra space from feed press */
 }
 
