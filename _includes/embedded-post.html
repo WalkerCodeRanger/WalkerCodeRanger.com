@@ -8,19 +8,19 @@
 	<div class="meta">
 {% if post.final %}
 	{% if post.comments == null or post.comments %}
-		<div class="comments"><a href="{{post.url}}/#disqus_thread" data-disqus-identifier="{{post.guid}}" class="internal">comments</a></div>
+		<div class="comments"><a href="{{post.url}}#disqus_thread" data-disqus-identifier="{{post.guid}}" class="internal">comments</a></div>
 	{% else %}
 		<div class="no-comments">Comments Closed</a></div>
 	{% endif %}
 {% endif %}
 		<div class="subscribe">
-			<a href="http://feeds.WalkerCodeRanger.com/WalkerCodeRangerBlog" class="urilv-button urilv-button-no-counter" name="feed-5730">Subscribe</a>
-		</div>
-		<div class="google-plus-one">
-			<div class="g-plusone" data-size="medium" data-href="{{site.url}}{{page.url}}/"></div>
+			<a href="http://feeds.WalkerCodeRanger.com/WalkerCodeRangerBlog" class="feedpress-button feedpress-button-no-counter" name="feed-5730">Subscribe</a>
 		</div>
 		<div class="tweet">
 			<a href="https://twitter.com/share" class="twitter-share-button" data-via="WalkerCodeRangr" data-url="{{site.url}}{{post.url}}" data-text="{{post.title}}">Tweet</a>
+		</div>
+		<div class="google-plus-one">
+			<div class="g-plusone" data-size="medium" data-align="right" data-href="{{site.url}}{{page.url}}/"></div>
 		</div>
 	</div>
 </article>
