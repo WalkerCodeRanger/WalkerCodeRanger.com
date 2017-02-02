@@ -419,7 +419,7 @@ article .meta .subscribe > .feedpress-button
 
 @media print
 {
-	article .meta .tweet
+	article .meta .subscribe, article .meta .tweet, article .meta .google-plus-one
 	{
 		display: none;
 	}

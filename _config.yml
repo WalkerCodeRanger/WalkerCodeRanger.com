@@ -1,6 +1,6 @@
 name: Walker Code Ranger
 markdown: kramdown
-exclude: README.md
+exclude: [README.md]
 highlights: pygments
 encoding: UTF-8
 permalink: /blog/:year/:month/:title/
