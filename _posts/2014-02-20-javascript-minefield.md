@@ -40,7 +40,7 @@ Furthermore,  many of the JavaScript mines are easy to step on even when you kno
 <section markdown="1">
 ## JavaScript History
 
-So how did we end up in this JavaScript minefield?  Well like a lot of minefields, it exists because of a lot of messy history. JavaScript was [created in 10 days in May 1995](http://www.w3.org/community/webed/wiki/A_Short_History_of_JavaScript) by [Brendan Eich](https://brendaneich.com). He incorporated many great ideas from Scheme and prototype based object oriented languages.  However, the syntax and certain other features of Java got tossed in too, and there were plenty of warts for better or worse.  It's just not possible to design a language in such a short time and get everything right.  Since then, the language as evolved through a [messy standardization process that was haunted by the browser wars](http://www.oreillynet.com/pub/a/javascript/2001/04/06/js_history.html).  Today JavaScript is experiencing a renaissance, but it can't escape from its [history](http://dailyjs.com/history-of-javascript.html).
+So how did we end up in this JavaScript minefield?  Well like a lot of minefields, it exists because of a lot of messy history. JavaScript was [created in 10 days in May 1995](http://www.w3.org/community/webed/wiki/A_Short_History_of_JavaScript) by [Brendan Eich](https://brendaneich.com). He incorporated many great ideas from Scheme and prototype based object oriented languages.  However, the syntax and certain other features of Java got tossed in too, and there were plenty of warts for better or worse.  It's just not possible to design a language in such a short time and get everything right.  Since then, the language as evolved through a [messy standardization process that was haunted by the browser wars](http://www.oreillynet.com/pub/a/javascript/2001/04/06/js_history.html).  Today JavaScript is experiencing a renaissance, but it can't escape from its history.
 </section>
 
 <section markdown="1">
@@ -64,3 +64,5 @@ Today, the three main contenders for superseding JavaScript are [CoffeeScript](h
 
 *[MPW]: Macintosh Programmer's Workshop
 *[GWT]: Google Web Toolkit
+
+**Edit 2018-01-10:** Removed dead link to DailyJs.com about the history of JavaScript.
