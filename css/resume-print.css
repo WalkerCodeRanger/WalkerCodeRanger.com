@@ -24,7 +24,7 @@ body
 	white-space: nowrap;
 }
 
-.breakBefore
+.break-before
 {
 	page-break-before: always;
 }

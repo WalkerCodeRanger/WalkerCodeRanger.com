@@ -21,14 +21,26 @@ ol { list-style-position: inside; }
 .header
 {
 	text-align: center;
-	margin-bottom: 2em;
+	margin-bottom: 1em;
 }
 
-.header .title
+.header .name
 {
-	font-size: 11pt;
+	font-size: 12pt;
 	font-weight: bold;
-	line-height: 2;
+}
+
+.header .headline
+{
+	font-size: 12pt;
+	display: inline-block;
+	margin-bottom: 0.5em;
+}
+
+.header .url
+{
+	display: inline-block;
+	margin-bottom: 0.5em;
 }
 
 .section
@@ -41,64 +53,17 @@ ol { list-style-position: inside; }
 	font-variant: small-caps;
 	display: block;
 	float: left;
-	width: 14ex;
+	width: 12ex;
 }
 
 .section .body
 {
-	margin-left: 14ex;
-}
-
-.skills .item1,
-.skills .item2,
-.skills .item3,
-.skills .item4,
-.skills .item5,
-.skills .item6,
-.skills .item7,
-.skills .item8,
-.skills .item9,
-.skills .item10,
-.skills .item11,
-.skills .item12
-{
-	margin-left: 0ex;
-}
-
-.skills .item13,
-.skills .item14,
-.skills .item15,
-.skills .item16,
-.skills .item17,
-.skills .item18,
-.skills .item19,
-.skills .item20,
-.skills .item21,
-.skills .item22
-{
-	margin-left: 47ex;
-}
-
-.skills li
-{
-	line-height: 1.2em;
-}
-
-.skills .item13
-{
-	margin-top: -14.4em;
-}
-
-.skills .item22,
-.skills .item23,
-.skills .item24
-{
-	visibility: hidden;
+	margin-left: 12ex;
 }
 
 .experience
 {
-	margin-bottom: 1em;
+	margin-bottom: 0.75em;
 	page-break-inside: avoid;
 }
 
