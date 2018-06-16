@@ -1,7 +1,8 @@
 ---
 layout: page
 ---
-<section id="topic-{{page.topic | downcase | replace: ' ', '-' | replace: '.net', 'dot-net' | replace: 'c#', 'c-sharp' | replace: '.', '-' }}" class="blog-topic">
+{% assign tagSlug = page.topic | replace: ' ', '-' | downcase | replace: '.net', 'dot-net' | replace: '.', '-' | replace: 'c#', 'c-sharp' %}
+<section id="topic-{{tagSlug}}" class="blog-topic">
 	{% if page.topic-title != null %}
 	<h1>Topic: {{page.topic-title}}</h1>
 	{% else %}

@@ -1,15 +1,28 @@
+# Site settings
 name: Walker Code Ranger
-markdown: kramdown
-exclude: [README.md]
-highlights: pygments
+
+
+title: "Walker Code Ranger Blog"
+url: "http://WalkerCodeRanger.com"
 encoding: UTF-8
 permalink: /blog/:year/:month/:title/
 paginate: 5
 paginate_path: "/blog/page:num"
-url: "http://WalkerCodeRanger.com"
-title: "Walker Code Ranger Blog"
+repository: WalkerCodeRanger/WalkerCodeRanger.github.io
 author:
   name: Jeff Walker Code Ranger
   email: Jeff@WalkerCodeRanger.com
-gems:
+
+# Build settings
+markdown: kramdown
+incremental: false # still experimental and seems to be causeing problems
+strict_front_matter: true
+
+plugins:
   - jekyll-redirect-from
+
+# Exclude from processing.
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock

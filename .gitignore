@@ -2,3 +2,5 @@ _abandoned
 _site
 _drafts
 _notes
+.vscode/settings.json
+.jekyll-metadata
