@@ -57,7 +57,7 @@ alert(unbound());
 
 The above code displays "Hello, undefined" instead of the naively expected "Hello, world".
 
-**Update**  
+**Update**
 A commenter ([alleycat5](http://www.reddit.com/user/alleycat5) on [Reddit](http://www.reddit.com/r/typescript/comments/21qxlh/why_typescript_isnt_the_answer/)) pointed out that TypeScript partially addresses issues with `==` because it will produce type errors for comparisons with `==` when it has type information.
 
 {% highlight javascript %}
