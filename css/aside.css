@@ -1,6 +1,6 @@
 /*****************************************************************************/
 /* It turns out to be very difficult to place an aside correctly. See:
-/*  http://stackoverflow.com/questions/22109071/position-aside-part-way-up-in-paragraph-with-css/22127561?noredirect=1#22127561
+/*  https://stackoverflow.com/questions/22109071/position-aside-part-way-up-in-paragraph-with-css/22127561?noredirect=1#22127561
 /*
 /* This approach uses JavaScript to move the element and gives it a different
 /* style if for some reason the JS doesn't move it

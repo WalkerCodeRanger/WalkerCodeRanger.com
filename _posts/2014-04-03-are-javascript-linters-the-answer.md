@@ -8,7 +8,7 @@ guid: 06a34377-2325-466f-8a3f-fbb6bd6c6703
 final: true
 ---
 
-In the first post of this series, I explained how [JavaScript is like a Minefield](http://www.walkercoderanger.com/blog/2014/02/javascript-minefield/).  Since then, I have [argued that TypeScript](http://www.walkercoderanger.com/blog/2014/02/typescript-isnt-the-answer/), [Dart](http://www.walkercoderanger.com/blog/2014/03/dart-isnt-the-answer/) and [CoffeeScript](http://www.walkercoderanger.com/blog/2014/03/coffeescript-isnt-the-answer/) are not the answer to the minefield.  I'm almost ready to move on to considering what the answer is, but first I feel the need to address a couple points raised by commenters on that first post.  They focused on the use of so called JavaScript linters, the two most popular of which are [JSHint](http://www.jshint.com/) and [JSLint](http://www.jslint.com/).  These tools check your JavaScript code for adherence to certain best practices and provide warnings/errors when they don't.  For such tools to be helpful, they really need to be integrated into your build pipeline so you are receiving constant feedback.  If a developer has to manually run the tool, it likely won't happen, or will happen so late there will be a large number of issues to fix.
+In the first post of this series, I explained how [JavaScript is like a Minefield](https://walkercoderanger.com/blog/2014/02/javascript-minefield/).  Since then, I have [argued that TypeScript](https://walkercoderanger.com/blog/2014/02/typescript-isnt-the-answer/), [Dart](https://walkercoderanger.com/blog/2014/03/dart-isnt-the-answer/) and [CoffeeScript](https://walkercoderanger.com/blog/2014/03/coffeescript-isnt-the-answer/) are not the answer to the minefield.  I'm almost ready to move on to considering what the answer is, but first I feel the need to address a couple points raised by commenters on that first post.  They focused on the use of so called JavaScript linters, the two most popular of which are [JSHint](http://www.jshint.com/) and [JSLint](http://www.jslint.com/).  These tools check your JavaScript code for adherence to certain best practices and provide warnings/errors when they don't.  For such tools to be helpful, they really need to be integrated into your build pipeline so you are receiving constant feedback.  If a developer has to manually run the tool, it likely won't happen, or will happen so late there will be a large number of issues to fix.
 
 These tools are absolutely helpful and can mitigate many of the common JavaScript land mines.   As a simple example, when using JSLint, the following code produces several errors:
 
@@ -30,7 +30,7 @@ I recognize that this argument will sound abstract and like quibbling over seman
 
 <section markdown="1">
 ## Can't Check Everything
-Even with a lint tool, there are many things about JavaScript that won't be checked. Additionally, even for issues that these tools address, JavaScript embedded in script tags in pages or in event attributes is generally not run through them.  As an example of what is not addressed, tools do nothing to mitigate the confusing nature of the semantics of `this`.  
+Even with a lint tool, there are many things about JavaScript that won't be checked. Additionally, even for issues that these tools address, JavaScript embedded in script tags in pages or in event attributes is generally not run through them.  As an example of what is not addressed, tools do nothing to mitigate the confusing nature of the semantics of `this`.
 
 {% highlight javascript %}
 (function () {
