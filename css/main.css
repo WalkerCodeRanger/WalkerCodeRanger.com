@@ -3,29 +3,29 @@
 /*****************************************************************************/
 html
 {
-	overflow-y: scroll;
+    overflow-y: scroll;
 }
 
 .error
 {
-	font-size: 48pt;
-	color: red;
-	text-align: center;
+    font-size: 48pt;
+    color: red;
+    text-align: center;
 }
 
 h1
 {
-	text-align: center;
-	text-transform: uppercase;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 /* Customize container */
-@media (min-width: 768px) 
+@media (min-width: 768px)
 {
-	.container
-	{
-		max-width: 730px;
-	}
+    .container
+    {
+        max-width: 730px;
+    }
 }
 
 /* begin sticky footer */
@@ -35,114 +35,114 @@ div.page { min-height: 100%; }
 
 div.page-content
 {
-	overflow: auto;
-	padding-bottom: 2.5em; /* must be same height as the footer */
+    overflow: auto;
+    padding-bottom: 2.5em; /* must be same height as the footer */
 }
 
 .container > footer
 {
-	padding: 0.5em 0;
-	border-top: 4px double #ccc;
-	text-align: center;
-	position: relative;
-	margin-top: -2.5em; /* negative value of footer height */
-	height: 2.5em;
-	clear: both;
+    padding: 0.5em 0;
+    border-top: 4px double #ccc;
+    text-align: center;
+    position: relative;
+    margin-top: -2.5em; /* negative value of footer height */
+    height: 2.5em;
+    clear: both;
 }
 
 /*Opera Fix for sticky footer*/
 body:before
 {
-	content:"";
-	height:100%;
-	float:left;
-	width:0;
-	margin-top:-32767px;/
+    content:"";
+    height:100%;
+    float:left;
+    width:0;
+    margin-top:-32767px;/
 }
 
 /* end sticky footer */
 
 body
 {
-	font-family: 'Crimson Text', serif;
-	letter-spacing: 0.3px;
+    font-family: 'Crimson Text', serif;
+    letter-spacing: 0.3px;
 }
 
 a:link, :visited
 {
-	color: #9C8A6A;
-	text-decoration: none;
+    color: #9C8A6A;
+    text-decoration: none;
 }
 a:hover, a:active
 {
-	color: #3E372B;
-	text-decoration: underline;
+    color: #3E372B;
+    text-decoration: underline;
 }
 
 article, p, .page-nav, li
 {
-	font-size: 14pt;
-	line-height: 1.5em;
-	color: #444;
+    font-size: 14pt;
+    line-height: 1.5em;
+    color: #444;
 }
 
 article, article p, article ul, .page-nav
 {
-	margin-bottom: 1.75em;
+    margin-bottom: 1.75em;
 }
 
 article p+ul
 {
-	margin-top: -1em;
+    margin-top: -1em;
 }
 
 blockquote p
 {
-	margin: 0 0 10px;
+    margin: 0 0 10px;
 }
 
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
 {
-	font-family: 'Crimson Text', serif;
+    font-family: 'Crimson Text', serif;
 }
 
 cite
 {
-	font-style: italic;
+    font-style: italic;
 }
 
 /* fudge the badge icon into place */
 .fa-stack.wcr-badge
 {
-	font-size: 14px;
-	position: absolute;
-	height: 18px;
-	width: 53.328125px;
-	top: 3.5555553436279297px;
-	left: -46.22222137451172px;
-	vertical-align: -15%;
-	text-align: center;
+    font-size: 14px;
+    position: absolute;
+    height: 18px;
+    width: 53.328125px;
+    top: 3.5555553436279297px;
+    left: -46.22222137451172px;
+    vertical-align: -15%;
+    text-align: center;
 }
 .fa-stack.wcr-badge .fa
 {
-	top: -7px;
+    top: -7px;
 }
 
 /* What series look like */
 .series-note
 {
-	max-width: 220ex;
-	margin: 0 auto;
-	border: 1px solid #ddd;
-	border-radius: 5px;
-	padding: .5em 1em;
-	margin-bottom: 1.75em;
-	background-color: #f4f4ff;
+    max-width: 220ex;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: .5em 1em;
+    margin-bottom: 1.75em;
+    background-color: #f4f4ff;
 }
 
 .series-note ul
 {
-	margin-bottom: 1em;
+    margin-bottom: 1em;
 }
 
 /*****************************************************************************/
@@ -150,136 +150,136 @@ cite
 /*****************************************************************************/
 header
 {
-	padding-top: 1em;
-	color: #999;
+    padding-top: 1em;
+    color: #999;
 }
 
 header a:link, header :visited
 {
-	color: #999;
+    color: #999;
 }
 
 header a:hover, header a:active
 {
-	color: #303030;
-	text-decoration: underline;
+    color: #303030;
+    text-decoration: underline;
 }
 
 header > ul
 {
-	margin: 0.75em auto;
-	border-top: 1px solid #EAEAEA;
-	border-bottom: 1px solid #EAEAEA;
-	text-transform: uppercase;
-	font-size: 1.5em;
-	background: #FBFBFB;
+    margin: 0.75em auto;
+    border-top: 1px solid #EAEAEA;
+    border-bottom: 1px solid #EAEAEA;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    background: #FBFBFB;
 }
 
 header ul
 {
-	list-style: none;
-	padding: 0;
-	text-align: center;
+    list-style: none;
+    padding: 0;
+    text-align: center;
 }
 
 header ul a
 {
-	white-space: nowrap;
+    white-space: nowrap;
 }
 
 header li
 {
-	display: inline;
-	margin: 0 2.5ex;
+    display: inline;
+    margin: 0 2.5ex;
 }
 
 header li ul
 {
-	display: inline;
-	margin-left: 2ex;
+    display: inline;
+    margin-left: 2ex;
 }
 
 header li ul li
 {
-	margin: 0 0.5ex;
+    margin: 0 0.5ex;
 }
 
 header li ul:before
 {
-	content: "(";
+    content: "(";
 }
 header li ul:after
 {
-	content: ")";
+    content: ")";
 }
 
 @media screen
 {
-	header > a
-	{
-		display: block;
-		position: relative;
-		width: 200px;
-		height: 200px;
-		text-indent: -9999px;
-		background-image: url(/images/WalkerCodeRangerBadge.png);
-		float: right;
-	}
+    header > a
+    {
+        display: block;
+        position: relative;
+        width: 200px;
+        height: 200px;
+        text-indent: -9999px;
+        background-image: url(/images/WalkerCodeRangerBadge.png);
+        float: right;
+    }
 }
 
 /* change the header for mobile */
 @media (max-width: 400px)
 {
-	header > a
-	{
-		float: none;
-		background-size: 100px;
-		width: 100px;
-		height: 100px;
-		margin: 0 auto;
-	}
+    header > a
+    {
+        float: none;
+        background-size: 100px;
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+    }
 }
 
 @media print
 {
-	@page
-	{
-		size: auto;   /* auto is the initial value */
+    @page
+    {
+        size: auto;   /* auto is the initial value */
 
-		/* this affects the margin in the printer settings */
-		margin: 10mm 4mm 15mm 4mm;
-	}
+        /* this affects the margin in the printer settings */
+        margin: 10mm 4mm 15mm 4mm;
+    }
 
-	header
-	{
-		padding-top: 0;
-		text-align: center;
-		font-size: 36pt;
-		line-height: 1em;
-		border-bottom: 4px double #ccc;
-	}
+    header
+    {
+        padding-top: 0;
+        text-align: center;
+        font-size: 36pt;
+        line-height: 1em;
+        border-bottom: 4px double #ccc;
+    }
 
-	header > a[href]:after
-	{
-		content: none;
-	}
+    header > a[href]:after
+    {
+        content: none;
+    }
 
-	header ul
-	{
-		display: none;
-	}
+    header ul
+    {
+        display: none;
+    }
 
-	a[href].internal:after
-	{
-		content: none;
-	}
+    a[href].internal:after
+    {
+        content: none;
+    }
 
-	p, article, li
-	{
-		font-size: 12pt;
-		line-height: 1.25em;
-		color: #000;
-	}
+    p, article, li
+    {
+        font-size: 12pt;
+        line-height: 1.25em;
+        color: #000;
+    }
 }
 
 /*****************************************************************************/
@@ -287,152 +287,152 @@ header li ul:after
 /*****************************************************************************/
 article
 {
-	margin-top: 2em;
-	border-top: 1px solid #ddd;
+    margin-top: 2em;
+    border-top: 1px solid #ddd;
 }
 
 article > .pub-line
 {
-	text-align: center;
+    text-align: center;
 }
 article > .pub-line .published
 {
-	display: inline-block;
-	position: relative;
-	margin: 0 auto;
-	top: -1em;
-	padding: 0 1ex;
-	font-family: "helvetica neue", helvetica, arial;
-	letter-spacing: normal;
-	font-size: 12pt;
-	color: #999;
-	background: #FFF;
+    display: inline-block;
+    position: relative;
+    margin: 0 auto;
+    top: -1em;
+    padding: 0 1ex;
+    font-family: "helvetica neue", helvetica, arial;
+    letter-spacing: normal;
+    font-size: 12pt;
+    color: #999;
+    background: #FFF;
 }
 
 @media print
 {
-	article > .pub-line .published
-	{
-		top: 0;
-	}
+    article > .pub-line .published
+    {
+        top: 0;
+    }
 }
 
 article h1
 {
-	color: #444;
-	text-transform: none;
+    color: #444;
+    text-transform: none;
 }
 
 article h1 a:link, article h1 :visited
 {
-	color: #444;
+    color: #444;
 }
 
 article .byline
 {
-	text-align: center;
-	font-size: 1.2em;
-	color: #999;
-	margin-bottom: 1em;
+    text-align: center;
+    font-size: 1.2em;
+    color: #999;
+    margin-bottom: 1em;
 }
 
 article .content
 {
-	margin-top: 1em;
+    margin-top: 1em;
 }
 
 article img
 {
-	max-width: 100%;
+    max-width: 100%;
 }
 
 article .meta
 {
-	color: #999;
+    color: #999;
 }
 
 article .meta .pub-line, article .meta .topic-line, article .meta .no-comments
 {
-	text-transform: uppercase;
+    text-transform: uppercase;
 }
 
 article .meta .published, article .meta .topics
 {
-	text-transform: none;
+    text-transform: none;
 }
 
 article .meta .no-comments
 {
-	margin-top: 0.5em;
-	text-align: center;
+    margin-top: 0.5em;
+    text-align: center;
 }
 
 article .meta .comments
 {
-	text-align: center;
+    text-align: center;
 }
 
 article .meta .subscribe, article .meta .tweet, article .meta .google-plus-one
 {
-	float: right;
-	margin-right: 4ex;
+    float: right;
+    margin-right: 4ex;
 }
 
 article .meta .subscribe
 {
-	margin-right: 0; /* no margin for the rightmost button */
-	overflow-x: hidden; /* hide the space removed from the feedpress-button */
+    margin-right: 0; /* no margin for the rightmost button */
+    overflow-x: hidden; /* hide the space removed from the feedpress-button */
 }
 
 article .meta .subscribe > .feedpress-button
 {
-	margin-right: -11px; /* get rid of extra space from feed press */
+    margin-right: -11px; /* get rid of extra space from feed press */
 }
 
 .page-nav
 {
-	border-top: 1px solid #ddd;
-	border-bottom: 1px solid #ddd;
-	padding-top: 1em;
-	padding-left: 1ex;
-	padding-right: 1ex;
-	margin: 1.5em 0;
-	background-color: #f7f7ff;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding-top: 1em;
+    padding-left: 1ex;
+    padding-right: 1ex;
+    margin: 1.5em 0;
+    background-color: #f7f7ff;
 }
 
 .page-nav .previous, .page-nav .older
 {
-	display: block;
-	float: left;
-	margin-right: 2ex;
-	margin-bottom: 1em;
+    display: block;
+    float: left;
+    margin-right: 2ex;
+    margin-bottom: 1em;
 }
 
 .page-nav .next, .page-nav .newer
 {
-	display: block;
-	float: right;
-	text-align: right;
-	margin-left: 2ex;
-	margin-bottom: 1em;
+    display: block;
+    float: right;
+    text-align: right;
+    margin-left: 2ex;
+    margin-bottom: 1em;
 }
 
 @media print
 {
-	article .meta .subscribe, article .meta .tweet, article .meta .google-plus-one
-	{
-		display: none;
-	}
+    article .meta .subscribe, article .meta .tweet, article .meta .google-plus-one
+    {
+        display: none;
+    }
 
-	.page-nav
-	{
-		display: none;
-	}
+    .page-nav
+    {
+        display: none;
+    }
 
-	div#disqus_thread
-	{
-		display: none;
-	}
+    div#disqus_thread
+    {
+        display: none;
+    }
 }
 
 /*****************************************************************************/
@@ -440,7 +440,7 @@ article .meta .subscribe > .feedpress-button
 /*****************************************************************************/
 #follow-me
 {
-	margin: 0 1em;
+    margin: 0 1em;
 }
 
 /*****************************************************************************/
@@ -449,7 +449,7 @@ article .meta .subscribe > .feedpress-button
 
 #blog article .byline
 {
-	display: none;
+    display: none;
 }
 
 /*****************************************************************************/
@@ -457,28 +457,28 @@ article .meta .subscribe > .feedpress-button
 /*****************************************************************************/
 #topics
 {
-	margin-bottom: 1.75em;
-	padding-right: 200px;
+    margin-bottom: 1.75em;
+    padding-right: 200px;
 }
 
 #topics ul
 {
-	display: block;
-	padding: 0;
-	width: 130ex;
-	margin: 0 auto;
-	list-style: none;
+    display: block;
+    padding: 0;
+    width: 130ex;
+    margin: 0 auto;
+    list-style: none;
 }
 
 #topics ul li
 {
-	border-bottom: 1px solid #efefef;
+    border-bottom: 1px solid #efefef;
 }
 #topics li .count
 {
-	display: block;
-	float: right;
-	margin-left: 1ex;
+    display: block;
+    float: right;
+    margin-left: 1ex;
 }
 
 /*****************************************************************************/
@@ -486,8 +486,8 @@ article .meta .subscribe > .feedpress-button
 /*****************************************************************************/
 #archive
 {
-	margin: 0 1em;
-	margin-bottom: 1.75em;
+    margin: 0 1em;
+    margin-bottom: 1.75em;
 }
 
 /*****************************************************************************/
@@ -495,46 +495,46 @@ article .meta .subscribe > .feedpress-button
 /*****************************************************************************/
 #about-me img
 {
-	float: left;
-	margin-right: 2ex;
+    float: left;
+    margin-right: 2ex;
 }
 
 section#find-me
 {
-	width: 387px;
-	margin-right: 2ex;
-	float: left;
-	clear: left;
+    width: 387px;
+    margin-right: 2ex;
+    float: left;
+    clear: left;
 }
 
 section#find-me h3
 {
-	text-align: center;
+    text-align: center;
 }
 
 @media screen
 {
-	section#find-me li
-	{
-		display: inline;
-		margin: 0 10px 0 40px;
-	}
+    section#find-me li
+    {
+        display: inline;
+        margin: 0 10px 0 40px;
+    }
 }
 
 @media print
 {
-	#about-me img
-	{
-		width: 5cm;
-		height: auto;
-	}
-	section#find-me
-	{
-		width: 73ex;
-		margin-right: 0;
-		margin-left: 2ex;
-		float: right;
-	}
+    #about-me img
+    {
+        width: 5cm;
+        height: auto;
+    }
+    section#find-me
+    {
+        width: 73ex;
+        margin-right: 0;
+        margin-left: 2ex;
+        float: right;
+    }
 }
 
 /*****************************************************************************/
@@ -544,37 +544,37 @@ section#find-me h3
 /* standard */
 .post pre
 {
-	border: 1px solid #ddd;
-	background-color: #eef;
-	padding: 0 .4em;
-	color: #000;
-	margin-top: -1em;
-	margin-bottom: 1.75em;
+    border: 1px solid #ddd;
+    background-color: #eef;
+    padding: 0 .4em;
+    color: #000;
+    margin-top: -1em;
+    margin-bottom: 1.75em;
 }
 
 .post code
 {
-	border: 1px solid #ddd;
-	background-color: #eef;
-	padding: 0 .2em;
-	color: #000;
+    border: 1px solid #ddd;
+    background-color: #eef;
+    padding: 0 .2em;
+    color: #000;
 }
 
 .post pre code
 {
-	border: none;
-	padding: 0;
+    border: none;
+    padding: 0;
 }
 
 /* terminal */
 .post pre.terminal
 {
-	border: 1px solid #000;
-	background-color: #333;
-	color: #FFF;
+    border: 1px solid #000;
+    background-color: #333;
+    color: #FFF;
 }
 
 .post pre.terminal code
 {
-	background-color: #333;
+    background-color: #333;
 }
