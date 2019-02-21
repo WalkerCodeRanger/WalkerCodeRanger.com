@@ -14,7 +14,7 @@ author:
 
 # Build settings
 markdown: kramdown
-incremental: false # still experimental and seems to be causeing problems
+incremental: false # still experimental and seems to be causing problems
 strict_front_matter: true
 
 plugins:

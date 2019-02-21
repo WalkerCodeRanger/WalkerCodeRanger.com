@@ -1,26 +1,23 @@
 <article class="post clearfix" id="{{ post.id | replace: '/blog/', 'post-' | replace: '/', '-' }}">
-	<div class="pub-line"><span class="published">{{ post.date | date: "%B %-d, %Y" }}</span></div>
-	<h1><a href="{{ post.url }}" class="internal">{{ post.title }}</a></h1>
-	<div class="byline">by <span class="author">{{ post.author }}</span></div>
-	<div class="content">
-		{{ post.content }}
-	</div>
-	<div class="meta">
+    <div class="pub-line"><span class="published">{{ post.date | date: "%B %-d, %Y" }}</span></div>
+    <h1><a href="{{ post.url }}" class="internal">{{ post.title }}</a></h1>
+    <div class="byline">by <span class="author">{{ post.author }}</span></div>
+    <div class="content">
+        {{ post.content }}
+    </div>
+    <div class="meta">
 {% if post.final %}
-	{% if post.comments == null or post.comments %}
-		<div class="comments"><a href="{{post.url}}#disqus_thread" data-disqus-identifier="{{post.guid}}" class="internal">comments</a></div>
-	{% else %}
-		<div class="no-comments">Comments Closed</a></div>
-	{% endif %}
+    {% if post.comments == null or post.comments %}
+        <div class="comments"><a href="{{post.url}}#disqus_thread" data-disqus-identifier="{{post.guid}}" class="internal">comments</a></div>
+    {% else %}
+        <div class="no-comments">Comments Closed</a></div>
+    {% endif %}
 {% endif %}
-		<div class="subscribe">
-			<a href="http://feeds.WalkerCodeRanger.com/WalkerCodeRangerBlog" class="feedpress-button feedpress-button-no-counter" name="feed-5730">Subscribe</a>
-		</div>
-		<div class="tweet">
-			<a href="https://twitter.com/share" class="twitter-share-button" data-via="WalkerCodeRangr" data-url="{{site.url}}{{post.url}}" data-text="{{post.title}}">Tweet</a>
-		</div>
-		<div class="google-plus-one">
-			<div class="g-plusone" data-size="medium" data-align="right" data-href="{{site.url}}{{page.url}}/"></div>
-		</div>
-	</div>
+        <div class="subscribe">
+            <a href="http://feeds.WalkerCodeRanger.com/WalkerCodeRangerBlog" class="feedpress-button feedpress-button-no-counter" name="feed-5730">Subscribe</a>
+        </div>
+        <div class="tweet">
+            <a href="https://twitter.com/share" class="twitter-share-button" data-via="WalkerCodeRangr" data-url="{{site.url}}{{post.url}}" data-text="{{post.title}}">Tweet</a>
+        </div>
+    </div>
 </article>

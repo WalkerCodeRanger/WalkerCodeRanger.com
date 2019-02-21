@@ -2,9 +2,9 @@
 layout: page
 ---
 {% if page.comments == null %}
-	{% assign comments = true %}
+    {% assign comments = true %}
 {% else %}
-	{% assign comments = page.comments %}
+    {% assign comments = page.comments %}
 {% endif %}
 {% if page.guid == null %}
 <div class="error">Post doesn't have a Guid!</div>
@@ -13,58 +13,55 @@ layout: page
 <div class="error">Draft</div>
 {% endunless %}
 <article class="post clearfix" id="{{ page.id | replace: '/blog/', 'post-' | replace: '/', '-' }}">
-	<div class="pub-line"><span class="published">{{ page.date | date: "%B %-d, %Y" }}</span></div>
-	<h1>{{ page.title }}</h1>
-	<div class="byline">by <span class="author">{{ page.author }}</span></div>
-	<div class="content">
-	{{ content }}
-	</div>
-	<div class="meta">
-		<div class="pub-line">Published: <span class="published">{{ page.date | date: "%B %-d, %Y" }}</span></div>
-		{% if page.tags != empty %}
-			<div class="topic-line">Topics: <span class="topics">
-			{% for tag in page.tags %}
-				{% assign tagSlug = tag | replace: ' ', '-' | downcase | replace: '.net', 'dot-net' | replace: '.', '-' | replace: 'c#', 'c-sharp' %}
-				<a href="/blog/topics/{{tagSlug}}/" class="internal" rel="tag">{{ tag }}</a>{% unless forloop.last %},&nbsp;{% endunless %}
-			{% endfor %}
-			</span></div>
-		{% endif %}
-		{% if comments != true %}
-		<div class="no-comments">Comments Closed</div>
-		{% endif %}
-		<div class="subscribe">
-			<a href="http://feeds.WalkerCodeRanger.com/WalkerCodeRangerBlog" class="urilv-button urilv-button-no-counter" name="feed-5730">Subscribe</a>
-		</div>
-		<div class="tweet">
-			<a href="https://twitter.com/share" class="twitter-share-button" data-via="WalkerCodeRangr" data-url="{{site.url}}{{page.url}}" data-text="{{page.title}}">Tweet</a>
-		</div>
-		<div class="google-plus-one">
-			<div class="g-plusone" data-size="medium" data-align="right" data-href="{{site.url}}{{page.url}}/"></div>
-		</div>
-	</div>
+    <div class="pub-line"><span class="published">{{ page.date | date: "%B %-d, %Y" }}</span></div>
+    <h1>{{ page.title }}</h1>
+    <div class="byline">by <span class="author">{{ page.author }}</span></div>
+    <div class="content">
+    {{ content }}
+    </div>
+    <div class="meta">
+        <div class="pub-line">Published: <span class="published">{{ page.date | date: "%B %-d, %Y" }}</span></div>
+        {% if page.tags != empty %}
+            <div class="topic-line">Topics: <span class="topics">
+            {% for tag in page.tags %}
+                {% assign tagSlug = tag | replace: ' ', '-' | downcase | replace: '.net', 'dot-net' | replace: '.', '-' | replace: 'c#', 'c-sharp' %}
+                <a href="/blog/topics/{{tagSlug}}/" class="internal" rel="tag">{{ tag }}</a>{% unless forloop.last %},&nbsp;{% endunless %}
+            {% endfor %}
+            </span></div>
+        {% endif %}
+        {% if comments != true %}
+        <div class="no-comments">Comments Closed</div>
+        {% endif %}
+        <div class="subscribe">
+            <a href="http://feeds.WalkerCodeRanger.com/WalkerCodeRangerBlog" class="urilv-button urilv-button-no-counter" name="feed-5730">Subscribe</a>
+        </div>
+        <div class="tweet">
+            <a href="https://twitter.com/share" class="twitter-share-button" data-via="WalkerCodeRangr" data-url="{{site.url}}{{page.url}}" data-text="{{page.title}}">Tweet</a>
+        </div>
+    </div>
 </article>
 <div class="page-nav clearfix">
-	{% if page.next %}
-		<a href="{{ page.next.url }}" class="next"><em>Next:</em> {{ page.next.title }} &raquo;</a>
-	{% endif %}
-	{% if page.previous %}
-		<a href="{{ page.previous.url }}" class="previous">&laquo; <em>Previous:</em> {{ page.previous.title }}</a>
-	{% endif %}
+    {% if page.next %}
+        <a href="{{ page.next.url }}" class="next"><em>Next:</em> {{ page.next.title }} &raquo;</a>
+    {% endif %}
+    {% if page.previous %}
+        <a href="{{ page.previous.url }}" class="previous">&laquo; <em>Previous:</em> {{ page.previous.title }}</a>
+    {% endif %}
 </div>
 
 {% if page.final and comments %}
     <div id="disqus_thread"></div>
-	<script type="text/javascript">
-	var disqus_shortname = 'walkercoderanger';
-	var disqus_identifier = '{{page.guid}}';
-	var disqus_url = '{{site.url}}{{page.url}}/';
+    <script type="text/javascript">
+    var disqus_shortname = 'walkercoderanger';
+    var disqus_identifier = '{{page.guid}}';
+    var disqus_url = '{{site.url}}{{page.url}}/';
 
-	/* * * DON'T EDIT BELOW THIS LINE * * */
-	(function() {
-		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-	})();
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
     </script>
     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
