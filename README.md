@@ -1,3 +1,3 @@
 ## WalkerCodeRanger.com
 
-This is my GitHub user page made with Jekyll, and Twitter Bootstrap.
+My professional site and blog, made with Jekyll and Bootstrap.
