@@ -31,7 +31,7 @@ To describe the future path of development:
 * Inactive: The project is not currently being maintained, but there are still people who would notice if someone reported a horrible bug or submitted a pull request. No guarantee is made that they would be addressed though they would at least get a reply.
 * Hiatus: The project is currently inactive, but there is an intention that it will return to an active status in the future. An idea of the time-frame is helpful here.
 * Ignored: This code is not being maintained, issues, questions, bugs and pull requests will not be looked at.
-* Legacy: The project was once active and may have had a reasonable community. There are is still some work to fix important bugs and answer some questions, but no major features will be added.
+* Legacy: The project was once active and may have had a reasonable community. There is still some work to fix important bugs and answer some questions, but no major features will be added.
 * Obsolete: The project uses technologies or versions of those technologies or approaches the owner and contributors think are obsolete and not worth further development. The code remains available for existing users or new users who are for some reason stuck on the old technologies. It may be helpful to combine this with a status like inactive, ignored or legacy to give a better indication of what users can expect.
 
 You might imagine that large open-source projects with slick websites are exempt from needing to describe the project status because their website indicates the amount of effort being invested into the project. However, it is not uncommon to come across a beautiful open-source project website that was created four years ago and the site and project have been ignored ever since.
