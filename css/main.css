@@ -394,7 +394,7 @@ article .meta .comments
     text-align: center;
 }
 
-article .meta .subscribe, article .meta .tweet
+article .meta .subscribe
 {
     float: right;
     margin-right: 4ex;
