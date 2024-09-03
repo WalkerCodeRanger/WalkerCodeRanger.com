@@ -68,7 +68,7 @@ body
     letter-spacing: 0.3px;
 }
 
-a:link, :visited
+a:link, a:visited
 {
     color: #9C8A6A;
     text-decoration: none;
@@ -77,6 +77,16 @@ a:hover, a:active
 {
     color: #3E372B;
     text-decoration: underline;
+}
+a .fa-brands, a .fa-solid, a .fa-regular
+{
+    color: #444;
+}
+a:hover .fa-brands, a:hover .fa-solid, a:hover .fa-regular
+{
+    color: #444;
+    font-size: 1.4em;
+    transition: font-size 0.3s ease;
 }
 
 article, p, .page-nav, li
@@ -111,21 +121,31 @@ cite
     font-style: italic;
 }
 
+/* adjust the size of the RSS logo to look better */
+.fa-rss.fa-lg
+{
+    font-size: 1.16em;
+}
+a:hover .fa-rss.fa-lg
+{
+    font-size: 1.3em;
+}
+
 /* fudge the badge icon into place */
 .fa-stack.wcr-badge
 {
-    font-size: 14px;
-    position: absolute;
-    height: 18px;
-    width: 53.328125px;
-    top: 3.5555553436279297px;
-    left: -46.22222137451172px;
-    vertical-align: -15%;
-    text-align: center;
+    left: -9px;
 }
-.fa-stack.wcr-badge .fa
+.fa-stack.wcr-badge .fa-star
 {
-    top: -7px;
+    top: -5.85px;
+    font-size: 0.97em;
+    left: 0.3px;
+}
+.fa-stack.wcr-badge .fa-circle
+{
+    font-size: 1.25em;
+    top: 2px;
 }
 
 /* What series look like */
@@ -190,13 +210,13 @@ header ul a
 header li
 {
     display: inline;
-    margin: 0 2.5ex;
+    margin: 0 1.5ex;
 }
 
 header li ul
 {
     display: inline;
-    margin-left: 2ex;
+    margin-left: 0.5ex;
 }
 
 header li ul li
@@ -207,10 +227,12 @@ header li ul li
 header li ul:before
 {
     content: "(";
+    margin-right: -0.75ex;
 }
 header li ul:after
 {
     content: ")";
+    margin-left: -0.75ex;
 }
 
 @media screen
@@ -438,7 +460,7 @@ article .meta .subscribe > .feedpress-button
 /*****************************************************************************/
 /* Home
 /*****************************************************************************/
-#follow-me
+#find-me
 {
     margin: 0 1em;
 }
@@ -499,7 +521,7 @@ article .meta .subscribe > .feedpress-button
     margin-right: 2ex;
 }
 
-section#find-me
+section#about-find-me
 {
     width: 387px;
     margin-right: 2ex;
@@ -507,14 +529,14 @@ section#find-me
     clear: left;
 }
 
-section#find-me h3
+section#about-find-me h3
 {
     text-align: center;
 }
 
 @media screen
 {
-    section#find-me li
+    section#about-find-me li
     {
         display: inline;
         margin: 0 10px 0 40px;
@@ -528,9 +550,9 @@ section#find-me h3
         width: 5cm;
         height: auto;
     }
-    section#find-me
+    section#about-find-me
     {
-        width: 73ex;
+        width: 80ex;
         margin-right: 0;
         margin-left: 2ex;
         float: right;
