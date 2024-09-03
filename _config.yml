@@ -19,6 +19,7 @@ strict_front_matter: true
 
 plugins:
   - jekyll-redirect-from
+  - jekyll-feed
 
 # Exclude from processing.
 exclude:
